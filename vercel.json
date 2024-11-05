@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "aframe/index.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "dinosaur-ar/index.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "goldfish-ar/index.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "rex/index.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      { "src": "/dinosaur-ar", "dest": "/dinosaur-ar/index.html" },
+      { "src": "/goldfish-ar", "dest": "/goldfish-ar/index.html" },
+      { "src": "/rex", "dest": "/rex/index.html" }
+    ]
+  }
+  
