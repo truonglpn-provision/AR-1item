@@ -2,10 +2,6 @@
     "version": 2,
     "builds": [
       {
-        "src": "aframe/index.html",
-        "use": "@vercel/static"
-      },
-      {
         "src": "dinosaur-ar/index.html",
         "use": "@vercel/static"
       },
@@ -21,7 +17,8 @@
     "routes": [
       { "src": "/dinosaur-ar", "dest": "/dinosaur-ar/index.html" },
       { "src": "/goldfish-ar", "dest": "/goldfish-ar/index.html" },
-      { "src": "/rex", "dest": "/rex/index.html" }
+      { "src": "/rex", "dest": "/rex/index.html" },
+      { "src": "/(.*)", "dest": "/dinosaur-ar/index.html" }
     ]
   }
   
