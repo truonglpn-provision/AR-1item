@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>恐竜AR | ProVision</title>
+    <title>Khủng Long AR | ProVision</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" media="all" href="/assets/dinosaur/css/style.css" />
@@ -47,118 +47,91 @@
             <img src="/assets/public/AR_works.png" class="main_logo" alt="ARWorks">
         </figure>
         <div class="center">
-
             <figure style="padding-top: 21vw;">
                 <img src="/assets/dinosaur/img/top_main.png" alt="" srcset="">
-                <!-- <img src="./img/top_main.png" class="main_visual" alt="Main visual"> -->
+                <!-- <img src="./img/top_main.png" class="main_visual" alt="Hình ảnh chính"> -->
             </figure>
-            <h1 class="title">恐竜AR</h1>
+            <h1 class="title">Khủng Long AR</h1>
 
-            <p class="subtext">・ロードに時間がかかる場合があります<br>
-                <span style="color:#F9D615">・Chrome/Safari以外で開いている場合<br>
-                    　URLをコピーしてChrome/Safariで<br>
-                    　開いてください</span>
+            <p class="subtext">・Có thể mất một thời gian để tải<br>
+                <span style="color:#F9D615">・Nếu bạn đang mở bằng trình duyệt khác ngoài Chrome/Safari<br>
+                    　Hãy sao chép URL và mở lại bằng Chrome/Safari<br>
+                </span>
             </p>
             <p class="ar_button">
                 <a href="javascript:void(0);" onclick="click_empty()" class="ar_mode"
-                    id="ar_button_text">ARを起動する<model-viewer id="3dmodel" src="/assets/dinosaur/3dmodel/T-REX3.gltf"
+                    id="ar_button_text">Khởi động AR<model-viewer id="3dmodel" src="/assets/dinosaur/3dmodel/T-REX3.gltf"
                         ios-src="/assets/dinosaur/3dmodel/T-REX3.usdz" autoplay ar ar-modes="scene-viewer webxr quick-look">
                     </model-viewer></a>
-
             </p>
             <p class="howto_button">
-                <a id="openModal" class="howto_button_text">操作の方法</a>
+                <a id="openModal" class="howto_button_text">Cách sử dụng</a>
             </p>
         </div>
 
         <footer>
-            <!-- <ul class="footer_link_list">
-                <li>
-                    <a class="footer_link"
-                        href="http://twitter.com/share?url=www.instagram.com/ar/176151088585780&text=バレンタインのチョコレートをARで楽しもう！hashtags=チョコレートAR">
-                        <img src="img/top_x.png" class="link_button">
-                    </a>
-                </li>
-                <li>
-                    <a class="footer_link" href="https://www.instagram.com/">
-                        <img src="img/top_ig.png" class="link_button">
-                    </a>
-                </li>
-                <li>
-                    <a class="footer_link"
-                        href="http://www.facebook.com/share.php?u=www.instagram.com/ar/176151088585780">
-                        <img src="img/top_fb.png" class="link_button">
-                    </a>
-                </li>
-                <li>
-                    <a class="footer_link"
-                        href="http://line.me/R/msg/text/?バレンタインのチョコレートをARで楽しもう! -チョコレートAR https://www.instagram.com/ar/176151088585780">
-                        <img src="img/top_line.png" class="link_button">
-                    </a>
-                </li>
-            </ul> -->
-            <div class="footer_textcolor center">Copyright @ProVision Inc. All Rights Reserved.</div>
+            <div class="footer_textcolor center">Bản quyền @ProVision Inc. Mọi quyền được bảo lưu.</div>
         </footer>
-
     </div>
 
     <section id="modalArea" class="modalArea">
         <div id="modalBg" class="modalBg"></div>
         <div class="modalWrapper center">
             <p class="modal_title">
-                ARの使い方
+                Cách sử dụng AR
             </p>
             <p class="modal_textarea_text">
-                <span class="weight">「ARを起動する」をタップ</span>すると<br>
-                ARが起動します
+                <span class="weight">Nhấn vào "Khởi động AR"</span><br>
+                để bắt đầu AR
             </p>
             <p class="ar_button modal_margin_bottom">
-                <a id="ar_button_text">ARを起動する</a>
+                <a id="ar_button_text">Khởi động AR</a>
             </p>
             <p class="modal_textarea_text">
-                机や地面など<br>
-                <span class="weight">平らな所に向かって</span><br>
-                <span class="weight">スマートフォンを動かします</span>
+                Hướng điện thoại của bạn<br>
+                <span class="weight">về bề mặt phẳng</span><br>
+                chẳng hạn như bàn hoặc sàn nhà<br>
+                và di chuyển điện thoại
             </p>
             <figure>
-                <img src="img/modal_01.png" class="modal_img" alt="Howto image 1">
+                <img src="img/modal_01.png" class="modal_img" alt="Hình ảnh hướng dẫn 1">
             </figure>
             <p class="modal_textarea_text">
-                <span class="weight">●ボタンで撮影</span>します<br>
-                長押しで動画も撮影できます
+                <span class="weight">Nhấn nút ● để chụp ảnh</span><br>
+                Giữ nút để quay video
             </p>
             <figure>
-                <img src="img/modal_02.png" class="modal_img" alt="Howto image 2">
+                <img src="img/modal_02.png" class="modal_img" alt="Hình ảnh hướng dẫn 2">
             </figure>
             <p class="modal_textarea_text">
-                <span class="weight">移動・拡大・縮小も可能</span><br>
-                ARがうまく表示されない場合<br>
-                大きさを変えると<br>
-                表示されることがあります
+                <span class="weight">Có thể di chuyển, phóng to và thu nhỏ</span><br>
+                Nếu AR không hiển thị đúng,<br>
+                hãy thay đổi kích thước để<br>
+                cải thiện hiển thị
             </p>
             <figure>
-                <img src="img/modal_03.png" class="modal_img2" alt="Howto image 3">
+                <img src="img/modal_03.png" class="modal_img2" alt="Hình ảnh hướng dẫn 3">
             </figure>
             <ul class="modal_notes_list">
-                <li class="modal_notes_height"><span class="weight">拡大・縮小</span><br><span
-                        class="modal_notes_text">2本指で拡大/縮小</span>
+                <li class="modal_notes_height"><span class="weight">Phóng to/thu nhỏ</span><br><span
+                        class="modal_notes_text">Dùng hai ngón tay để phóng to/thu nhỏ</span>
                 </li>
-                <li class="modal_notes_height"><span class="weight">移動</span><br><span
-                        class="modal_notes_text">1本指で押さえたまま移動</span>
+                <li class="modal_notes_height"><span class="weight">Di chuyển</span><br><span
+                        class="modal_notes_text">Giữ một ngón tay để di chuyển</span>
                 </li>
-                <li class="modal_notes_height"><span class="weight">角度</span><br><span
-                        class="modal_notes_text">1本指で押さえ<br>別の指で動かして角度調整</span>
+                <li class="modal_notes_height"><span class="weight">Điều chỉnh góc</span><br><span
+                        class="modal_notes_text">Giữ một ngón tay<br>và di chuyển ngón khác để điều chỉnh góc</span>
                 </li>
             </ul>
             <div class="modal_howto_notuse">
                 <p class="modal_howto_notuse_text">
-                    <span>本コンテンツは<br>
-                        以下のAR対応端末でご利用いただけます</span>
+                    <span>Nội dung này<br>
+                        có thể sử dụng trên các thiết bị hỗ trợ AR sau đây</span>
                 </p>
                 <p class="modal_howto_notuse_text2">
-                    iOS：iPhone6S以降/iOS11.0以降<br>
-                    Android：<a href="https://developers.google.com/ar/devices?hl=ja" target="_blank"
-                        style="color:#264E98">こちら</a>に記載がございます
+                    iOS: iPhone6S trở lên/iOS11.0 trở lên<br>
+                    Android: Tham khảo <a href="https://developers.google.com/ar/devices?hl=ja" target="_blank"
+                        style="color:#264E98">tại đây</a>
                 </p>
             </div>
 
@@ -167,7 +140,7 @@
             </div>
             <div id="closeModal" class="closeModal2 center">
                 <i class="fa-solid fa-xmark fa-2x" style="color:#016D76"></i><br>
-                <span class="weight" style="color:#016D76">CLOSE</span>
+                <span class="weight" style="color:#016D76">ĐÓNG</span>
             </div>
         </div>
     </section>
@@ -176,6 +149,7 @@
     <script type="text/javascript" src="./js/modal.js"></script>
 
 </body>
+
 
 
 </html>
