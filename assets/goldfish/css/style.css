@@ -12,11 +12,12 @@
 /* Phong cách tổng thể */
 body {
     font-family: var(--font-primary);
-    background: linear-gradient(135deg, #007BFF, #00CFFF);
+    background: linear-gradient(200deg, #eff7ff, #00CFFF);
     color: var(--color-text);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    height: 100vh; 
 }
 
 figure {
@@ -25,6 +26,38 @@ figure {
     align-items: center;
     margin: 0 auto; /* Đưa figure ra giữa */
     text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Nền mờ nhẹ */
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%;
+}
+
+.menas_logo, .prrv_logo {
+    object-fit: contain; /* Giữ tỷ lệ logo */
+}
+
+.menas_logo {
+    height: 100px;
+    width: 200px;
+    padding-left: 20px;
+}
+.prrv_logo {
+    height: 100px;
+    width: 90px;
+    padding-right: 20px ;
 }
 
 .modal_img {
@@ -43,11 +76,6 @@ figure {
     
 }
 
-/* Logo and title */
-.main_logo {
-    width: 150px;
-    margin: 20px 0;
-}
 
 
 .title {
@@ -69,13 +97,9 @@ figure {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Chiều cao toàn màn hình */
+    /* height: 100vh; Chiều cao toàn màn hình */
     position: relative;
     z-index: 10000;
-}
-
-.center img:hover {
-    transform: scale(1.05);
 }
 
 
@@ -97,26 +121,35 @@ figure {
     z-index: 10; /* Đảm bảo nằm phía trên nội dung khác */
 }
 
-
-.subtext {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: var(--color-highlight);
-    margin-bottom: 20px;
-    text-align: center;
+.page_content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 
 /*container*/
 .ar_container {
-    position: absolute;
-    bottom: 20px; /* Đặt container cách mép dưới màn hình */
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
+    flex-direction: row;
+    /* position: absolute; */
+    /* bottom: 20px; Đặt container cách mép dưới màn hình */
+    /* left: 50%;
+    transform: translateX(-50%); */
     gap: 15px;
-    z-index: 10000; /* Đảm bảo các nút luôn nổi trên mô hình */
+    z-index: 10000;
+    bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
 }
 
+/* Căn chỉnh cho phần chứa các nút */
+.ar_container_button {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa hai nút */
+}
 
 
 /* button */
@@ -183,7 +216,7 @@ button, .ar_button a, .howto_button a {
 }
 
 .ar_button a:hover, .howto_button a:hover {
-    transform: scale(1.1); /* Phóng to nhẹ khi hover */
+    
     background: linear-gradient(135deg, #ff6a00, #ee0979); /* Chuyển màu gradient khi hover */
     box-shadow: 0px 12px 20px rgba(238, 9, 121, 0.4); /* Bóng đổ đậm hơn khi hover */
 }
@@ -209,13 +242,6 @@ button, .ar_button a, .howto_button a {
 
 
 
-/* Hiệu ứng khi hover (di chuột vào) */
-.ar_mode:hover {
-    background-color: #FF7700; /* Đổi màu nền khi hover */
-    transform: scale(1.05); /* Phóng to nhẹ khi hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Tăng đổ bóng khi hover */
-}
-
 /* Hiệu ứng khi nhấn vào nút */
 .ar_mode:active {
     transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
@@ -224,33 +250,30 @@ button, .ar_button a, .howto_button a {
 
 
 
-/* Hiệu ứng ánh sáng di chuyển */
-.ar_mode::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 60%);
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
-}
-
-.ar_mode:hover::before {
-    opacity: 1;
-    transform: translateX(150%) translateY(150%) rotate(45deg); /* Di chuyển ánh sáng khi hover */
-}
-
-
-.subtext {
+/* Căn chỉnh cho phần subtext */
+.div_subtext {
+    font-size: 0.7rem;
+    color: #ffffff;
+    line-height: 1.5;
     text-align: center;
-    font-size: 1.1em;
-    color: #fff;
-    margin-top: 20px;
-    z-index: 10000;
+    padding: 10px;
+    border-radius: 8px;
+    
+    position: fixed;
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 100px;
 }
+
+
+/* Căn chỉnh cho phần chứa các nút */
+.ar_container_button {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa hai nút */
+}
+
 
 
 /* Modal */
@@ -361,7 +384,6 @@ ul.modal_notes_list {
 .copyright {
     background: linear-gradient(135deg, #007BFF, #00CFFF); /* Màu gradient xanh */
     color: #FFFFFF; /* Màu chữ trắng */
-    font-size: 1rem; /* Kích thước chữ vừa phải */
     padding: 10px 20px; /* Khoảng cách bên trong để dễ nhìn */
     text-align: center; /* Căn giữa nội dung */
     font-weight: bold; /* Tô đậm chữ để dễ đọc */
@@ -369,17 +391,31 @@ ul.modal_notes_list {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
     margin-top: 20px; /* Tạo khoảng cách phía trên */
     transition: transform 0.3s ease, background 0.3s ease; /* Hiệu ứng chuyển động */
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 /* Hiệu ứng khi hover */
 .copyright:hover {
     transform: scale(1.05); /* Phóng to nhẹ khi hover */
     background: linear-gradient(135deg, #00CFFF, #007BFF); /* Đổi hướng gradient khi hover */
-    cursor: pointer; /* Đổi con trỏ thành tay chỉ */
 }
 
+#ar_work_logo {
+    max-width: 100px; /* Điều chỉnh kích thước logo */
+    height: auto;
+}
 
-
+.copyright_text {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+    flex-grow: 1;
+  }
 
 /* animations */
 @keyframes fadeInUp {
@@ -419,38 +455,17 @@ ul.modal_notes_list {
 
     #d3model {
         width: 100vw;
-        height: 30vh;
-        position: fixed;
+        height: 20vh;
+        /* position: fixed;
         top: 0;
-        right: 0;
+        right: 0; */
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
         z-index: 9999;
-        animation: autoScale 40s infinite;
     }
     
-    @keyframes autoScale {
-        0%, 100% {
-            width: 100vw;
-            height: 20vh;
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 9999;
-            
-        }
-
-        50% {
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 9999;
-        }
-    }
-
-    .subtext {
-        font-size: 1rem;
-    }
+  
     .center img, .modal_img {
         width: 80%;
         max-width: 250px;
@@ -477,11 +492,13 @@ ul.modal_notes_list {
 
     #d3model {
         width: 100vw;
-        height: 50vh;
-        position: fixed;
-        top: 0;
-        right: 0;
+        height: 20vh;
+
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
         z-index: 9999;
+        
     }
     
 
@@ -507,34 +524,16 @@ ul.modal_notes_list {
 
     #d3model {
         width: 100vw;
-        height: 100vh;
-        position: fixed;
+        height: 35vh;
+        /* position: fixed;
         top: 0;
-        right: 0;
+        right: 0; */
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
         z-index: 9999;
-        animation: autoScale 20s infinite;
     }
     
-    @keyframes autoScale {
-        0%, 100% {
-            width: 100vw;
-            height: 20vh;
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 9999;
-            
-        }
-
-        50% {
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 9999;
-        }
-    }
 
     .center img, .modal_img {
         width: 50%;
