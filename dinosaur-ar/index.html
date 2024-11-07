@@ -48,7 +48,6 @@
       gtag("config", "G-Q82WWDN1HB");
     </script>
 
-   
     <script src="/assets/public/index.js"></script>
   </head>
 
@@ -56,20 +55,20 @@
     <div id="main">
       <figure class="header">
         <img
-          src="/assets/public/AR_works.png"
-          class="main_logo"
-          alt="ARWorks"
-        />
+        src="/assets/public/menas-logo.png"
+        class="menas_logo"
+        alt="main_ARWorks"/>
+        <img
+        src="/assets/public/provision-logo.png"
+        class="prrv_logo"
+        alt="ARWorks"/>
       </figure>
 
-      <h1 class="title">Khủng Long AR</h1>
-      
-      <div class="center">
-        <figure style="padding-top: 10vw">
-          <!-- <img src="/assets/dinosaur/img/top_main.png" alt="" srcset=""> -->
+      <div class="page_content center">
 
+        <figure style="padding-top: 5vw">
           <model-viewer
-            id="3dmodel"
+            id="d3model"
             src="/assets/dinosaur/3dmodel/T-REX3.gltf"
             ios-src="/assets/dinosaur/3dmodel/T-REX3.usdz"
             autoplay
@@ -77,49 +76,45 @@
             ar-modes="scene-viewer webxr quick-look"
             camera-controls
             auto-rotate
-            camera-orbit="0deg 90deg 3m"
-            field-of-view="45deg"
-            style="
-              width: 100vw;
-              height: 100vh;
-              position: fixed;
-              top: 0;
-              left: 0;
-              z-index: 9999;
-            "
+            camera-orbit="0deg 90deg 10m"
+            field-of-view="20deg"
           >
           </model-viewer>
-
-          <!-- <img src="./img/top_main.png" class="main_visual" alt="Hình ảnh chính"> -->
         </figure>
-       
-
-        <p class="subtext">
-          ・Có thể mất một thời gian để tải<br />
-          <span style="color: #f9d615"
-            >・Nếu bạn đang mở bằng trình duyệt khác ngoài Chrome/Safari<br />
-            　Hãy sao chép URL và mở lại bằng Chrome/Safari<br />
-          </span>
-        </p>
 
         <!-- buttons -->
         <div class="ar_container">
-           
+          <div class="ar_container_button"></div>
             <p class="ar_button">
-                <a class="ar_mode  ar_button_text">Khởi động AR
-                    
-                </a>
+              <a class="ar_mode ar_button_text">Khởi động AR </a>
             </p>
-          <p class="howto_button">
-            <a id="openModal" class="howto_button_text">Cách sử dụng</a>
+            <p class="howto_button">
+              <a id="openModal" class="howto_button_text">Cách sử dụng</a>
+            </p>
+        </div>
+         
+        <div class="div_subtext">
+          <p class="subtext">
+            ・Có thể mất một thời gian để tải<br />
+            <span style="color: #f9d615"
+              >・Nếu bạn đang mở bằng trình duyệt khác ngoài Chrome/Safari<br />
+              　Hãy sao chép URL và mở lại bằng Chrome/Safari<br />
+            </span>
           </p>
         </div>
-
+         
       </div>
 
       <footer>
-        <div class="footer_textcolor center">
-          Bản quyền @ProVision Inc. Mọi quyền được bảo lưu.
+        
+        <div class="copyright center">
+          <img
+          src="/assets/public/AR_works.png"
+          id="ar_work_logo"
+          alt="ARWorks"/>
+          <div class="copyright_text">
+            Bản quyền @ProVision Inc. Mọi quyền được bảo lưu.
+          </div>
         </div>
       </footer>
     </div>
@@ -127,6 +122,10 @@
     <section id="modalArea" class="modalOverlay">
       <div id="modalBg" class="modalBg"></div>
       <div class="modalWrapper center">
+        <img
+          src="/assets/dinosaur/img/logo_dinosaur.png"
+          class="logo_dinosaur"
+        />
         <p class="modal_title">Cách sử dụng AR</p>
         <p class="modal_textarea_text">
           <span class="weight">Nhấn vào "Khởi động AR"</span><br />
@@ -213,7 +212,6 @@
           </p>
         </div>
 
-        
         <div id="closeModal" class="closeModal2 center">
           <i class="fa-solid fa-xmark fa-2x" style="color: #ffffff"></i><br />
         </div>

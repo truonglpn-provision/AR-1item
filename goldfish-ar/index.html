@@ -1,181 +1,210 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Cá Vàng AR | ProVision</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
     <link rel="stylesheet" media="all" href="/assets/goldfish/css/style.css" />
-    <link rel="icon" href="/assets/goldfish/img/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link rel="icon" href="/assets/goldfish/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/51a67340ee.js" crossorigin="anonymous"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/51a67340ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+    ></script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q82WWDN1HB"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Q82WWDN1HB"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-Q82WWDN1HB');
+      gtag("config", "G-Q82WWDN1HB");
     </script>
 
-    <!-- Other features -->
-    <script>
-        $(function () {
-            $('.ar_mode').click(function () {
-                this.querySelector("model-viewer").activateAR();
-            });
-        });
-        function click_empty() { }
-    </script>
+    <script src="/assets/public/index.js"></script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div id="main">
-        <figure class="header">
-            <img src="/assets/goldfish/img/AR_works.png" class="main_logo" alt="ARWorks">
+      <figure class="header">
+        <img
+          src="/assets/goldfish/img/AR_works.png"
+          class="main_logo"
+          alt="ARWorks"
+        />
+      </figure>
+
+      <h1 class="title">Cá Vàng AR</h1>
+
+      <div class="center">
+        <figure style="padding-top: 10vw">
+          <model-viewer
+            id="d3model"
+            src="/assets/goldfish/3dmodel/kingyo_small.gltf"
+            ios-src="/assets/goldfish/3dmodel/kingyo_small.usdz"
+            autoplay
+            ar
+            ar-modes="scene-viewer webxr quick-look"
+            camera-controls
+            auto-rotate
+            camera-orbit="0deg 90deg 10m"
+            field-of-view="80deg"
+          >
+          </model-viewer>
         </figure>
-        <div class="center"> 
-            <figure style="padding-top: 21vw;">
-                <img src="/assets/goldfish//img/top_main.png" class="main_visual" alt="Hình ảnh chính">
-            </figure>
-            <h1 class="title">Cá Vàng AR</h1>
-        
-            <p class="subtext">・Có thể mất một thời gian để tải<br>
-                <span style="color:#EE6237">・Nếu bạn đang mở bằng trình duyệt khác ngoài Chrome/Safari<br>
-                    　Hãy sao chép URL và mở lại bằng Chrome/Safari<br>
-                </span>
-            </p>
-            <p class="ar_button">
-                <a href="javascript:void(0);" onclick="clicks_empty()" class="ar_mode"
-                    id="ar_button_text">Khởi động AR<model-viewer id="3dmodel" src="/assets/goldfish/3dmodel/kingyo_small.gltf"
-                        ios-src="/assets/goldfish/3dmodel/kingyo_small.usdz" autoplay ar ar-modes="scene-viewer webxr quick-look">
-                </model-viewer></a>
-            </p>
-            <p class="howto_button">
-                <a id="openModal" class="howto_button_text">Cách sử dụng</a>
-            </p>
+
+     
+
+        <!-- buttons -->
+        <div class="ar_container">
+          <p class="subtext">
+            ・Có thể mất một thời gian để tải<br />
+            <span style="color: #f9d615"
+              >・Nếu bạn đang mở bằng trình duyệt khác ngoài Chrome/Safari<br />
+              　Hãy sao chép URL và mở lại bằng Chrome/Safari<br />
+            </span>
+          </p>
+
+          <p class="ar_button">
+            <a class="ar_mode ar_button_text">Khởi động AR </a>
+          </p>
+          <p class="howto_button">
+            <a id="openModal" class="howto_button_text">Cách sử dụng</a>
+          </p>
         </div>
-        
+      </div>
 
-        <footer>
-            <!-- <ul class="footer_link_list">
-                <li>
-                    <a class="footer_link"
-                        href="http://twitter.com/share?url=www.instagram.com/ar/176151088585780&text=バレンタインのチョコレートをARで楽しもう！hashtags=チョコレートAR">
-                        <img src="img/top_x.png" class="link_button">
-                    </a>
-                </li>
-                <li>
-                    <a class="footer_link" href="https://www.instagram.com/">
-                        <img src="img/top_ig.png" class="link_button">
-                    </a>
-                </li>
-                <li>
-                    <a class="footer_link"
-                        href="http://www.facebook.com/share.php?u=www.instagram.com/ar/176151088585780">
-                        <img src="img/top_fb.png" class="link_button">
-                    </a>
-                </li>
-                <li>
-                    <a class="footer_link"
-                        href="http://line.me/R/msg/text/?バレンタインのチョコレートをARで楽しもう! -チョコレートAR https://www.instagram.com/ar/176151088585780">
-                        <img src="img/top_line.png" class="link_button">
-                    </a>
-                </li>
-            </ul> -->
-            <div class="footer_textcolor center">Copyright @ProVision Inc. All Rights Reserved.</div>
-        </footer>
-
+      <footer>
+        <div class="copyright center">
+          Bản quyền @ProVision Inc. Mọi quyền được bảo lưu.
+        </div>
+      </footer>
     </div>
 
-    <section id="modalArea" class="modalArea">
-        <div id="modalBg" class="modalBg"></div>
-        <div class="modalWrapper center">
-            <p class="modal_title">
-                Cách sử dụng AR
-            </p>
-            <p class="modal_textarea_text">
-                <span class="weight">Nhấn vào "Khởi động AR"</span><br>
-                để bắt đầu AR
-            </p>
-            <p class="ar_button modal_margin_bottom">
-                <a id="ar_button_text">Khởi động AR</a>
-            </p>
-            <p class="modal_textarea_text">
-                Hướng điện thoại của bạn<br>
-                <span class="weight">về bề mặt phẳng</span><br>
-                chẳng hạn như bàn hoặc sàn nhà<br>
-                và di chuyển điện thoại
-            </p>
-            <figure>
-                <img src="/assets/goldfish/img/modal_01.png" class="modal_img" alt="Hình ảnh hướng dẫn 1">
-            </figure>
-            <p class="modal_textarea_text">
-                <span class="weight">Nhấn nút ● để chụp ảnh</span><br>
-                Giữ nút để quay video
-            </p>
-            <figure>
-                <img src="/assets/goldfish/img/modal_02.png" class="modal_img" alt="Hình ảnh hướng dẫn 2">
-            </figure>
-            <p class="modal_textarea_text">
-                <span class="weight">Có thể di chuyển, phóng to và thu nhỏ</span><br>
-                Nếu AR không hiển thị đúng,<br>
-                hãy thay đổi kích thước để<br>
-                cải thiện hiển thị
-            </p>
-            <figure>
-                <img src="/assets/goldfish/img/modal_03.png" class="modal_img2" alt="Hình ảnh hướng dẫn 3">
-            </figure>
-            <ul class="modal_notes_list">
-                <li class="modal_notes_height"><span class="weight">Phóng to/thu nhỏ</span><br><span
-                        class="modal_notes_text">Dùng hai ngón tay để phóng to/thu nhỏ</span>
-                </li>
-                <li class="modal_notes_height"><span class="weight">Di chuyển</span><br><span
-                        class="modal_notes_text">Giữ một ngón tay để di chuyển</span>
-                </li>
-                <li class="modal_notes_height"><span class="weight">Điều chỉnh góc</span><br><span
-                        class="modal_notes_text">Giữ một ngón tay<br>và di chuyển ngón khác để điều chỉnh góc</span>
-                </li>
-            </ul>
-            <div class="modal_howto_notuse">
-                <p class="modal_howto_notuse_text">
-                    <span>Nội dung này<br>
-                        có thể sử dụng trên các thiết bị hỗ trợ AR sau đây</span>
-                </p>
-                <p class="modal_howto_notuse_text2">
-                    iOS: iPhone6S trở lên/iOS11.0 trở lên<br>
-                    Android: Tham khảo <a href="https://developers.google.com/ar/devices?hl=ja" target="_blank"
-                        style="color:#EE6237">tại đây</a>
-                </p>
-            </div>
-    
-            <div id="closeModal" class="closeModal">
-                <i class="fa-solid fa-xmark fa-2x" style="color:#939393"></i>
-            </div>
-            <div id="closeModal" class="closeModal2 center">
-                <i class="fa-solid fa-xmark fa-2x" style="color:#454545"></i><br>
-                <span class="weight" style="color:#454545">ĐÓNG</span>
-            </div>
+    <section id="modalArea" class="modalOverlay">
+      <div id="modalBg" class="modalBg"></div>
+      <div class="modalWrapper center">
+        <p class="modal_title">Cách sử dụng AR</p>
+        <p class="modal_textarea_text">
+          <span class="weight">Nhấn vào "Khởi động AR"</span><br />
+          để bắt đầu AR
+        </p>
+        <p class="ar_button modal_margin_bottom">
+          <a class="ar_button_text">Khởi động AR</a>
+        </p>
+        <p class="modal_textarea_text">
+          Hướng điện thoại của bạn<br />
+          <span class="weight">về bề mặt phẳng</span><br />
+          chẳng hạn như bàn hoặc sàn nhà<br />
+          và di chuyển điện thoại
+        </p>
+        <figure>
+          <img
+            src="/assets/goldfish/img/modal_01.png"
+            class="modal_img"
+            alt="Hình ảnh hướng dẫn 1"
+          />
+        </figure>
+        <p class="modal_textarea_text">
+          <span class="weight">Nhấn nút ● để chụp ảnh</span><br />
+          Giữ nút để quay video
+        </p>
+        <figure>
+          <img
+            src="/assets/goldfish/img/modal_02.png"
+            class="modal_img"
+            alt="Hình ảnh hướng dẫn 2"
+          />
+        </figure>
+        <p class="modal_textarea_text">
+          <span class="weight">Có thể di chuyển, phóng to và thu nhỏ</span
+          ><br />
+          Nếu AR không hiển thị đúng,<br />
+          hãy thay đổi kích thước để<br />
+          cải thiện hiển thị
+        </p>
+        <figure>
+          <img
+            src="/assets/goldfish/img/modal_03.png"
+            class="modal_img2"
+            alt="Hình ảnh hướng dẫn 3"
+          />
+        </figure>
+        <ul class="modal_notes_list">
+          <li class="modal_notes_height">
+            <span class="weight">Phóng to/thu nhỏ</span><br /><span
+              class="modal_notes_text"
+              >Dùng hai ngón tay để phóng to/thu nhỏ</span
+            >
+          </li>
+          <li class="modal_notes_height">
+            <span class="weight">Di chuyển</span><br /><span
+              class="modal_notes_text"
+              >Giữ một ngón tay để di chuyển</span
+            >
+          </li>
+          <li class="modal_notes_height">
+            <span class="weight">Điều chỉnh góc</span><br /><span
+              class="modal_notes_text"
+              >Giữ một ngón tay<br />và di chuyển ngón khác để điều chỉnh
+              góc</span
+            >
+          </li>
+        </ul>
+        <div class="modal_howto_notuse">
+          <p class="modal_howto_notuse_text">
+            <span
+              >Nội dung này<br />
+              có thể sử dụng trên các thiết bị hỗ trợ AR sau đây</span
+            >
+          </p>
+          <p class="modal_howto_notuse_text2">
+            iOS: iPhone6S trở lên/iOS11.0 trở lên<br />
+            Android: Tham khảo
+            <a
+              href="https://developers.google.com/ar/devices?hl=ja"
+              target="_blank"
+              style="color: #264e98"
+              >tại đây</a
+            >
+          </p>
         </div>
+
+        <div id="closeModal" class="closeModal2 center">
+          <i class="fa-solid fa-xmark fa-2x" style="color: #ffffff"></i><br />
+        </div>
+      </div>
     </section>
-    
 
-    <script type="text/javascript" src="//assets/goldfish/com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/modal.js"></script>
-
-</body>
-
-
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="/assets/goldfish/js/modal.js"></script>
+  </body>
 </html>

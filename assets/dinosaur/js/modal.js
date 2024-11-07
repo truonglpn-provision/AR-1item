@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 });
 
-document.getElementById("3dmodel").addEventListener("dblclick", function () {
+
+document.getElementById("d3model").addEventListener("dblclick", function () {
   if (!document.fullscreenElement) {
     this.requestFullscreen().catch((err) => {
       alert(
