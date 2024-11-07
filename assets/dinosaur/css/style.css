@@ -31,10 +31,10 @@ figure {
 footer {
     position: fixed;
     bottom: 0;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     width: 100%;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Nền mờ nhẹ */
+   
 }
 
 
@@ -43,6 +43,7 @@ footer {
     justify-content: space-between; 
     align-items: center; /* Căn giữa theo chiều dọc */
     width: 100%;
+    z-index: 9998;
 }
 
 .menas_logo, .prrv_logo {
@@ -52,12 +53,12 @@ footer {
 .menas_logo {
     height: 100px;
     width: 200px;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 .prrv_logo {
     height: 100px;
     width: 90px;
-    padding-right: 20px ;
+    padding-right: 10px ;
 }
 
 .modal_img {
@@ -138,11 +139,11 @@ footer {
     /* left: 50%;
     transform: translateX(-50%); */
     gap: 15px;
-    z-index: 10000;
+    z-index: 9998;
     bottom: 30px;
     align-items: center;
     justify-content: center;
-    margin: 20px;
+    /* margin: 20px; */
 }
 
 /* Căn chỉnh cho phần chứa các nút */
@@ -171,7 +172,7 @@ button, .ar_button a, .howto_button a {
 
 .ar_button a, .howto_button a {
     padding: 12px 24px;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
     border: none;
@@ -264,7 +265,7 @@ button, .ar_button a, .howto_button a {
     bottom: 0;
     left: 0;
     right: 0;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 
@@ -455,7 +456,7 @@ ul.modal_notes_list {
 
     #d3model {
         width: 100vw;
-        height: 20vh;
+        height: 40vh;
         /* position: fixed;
         top: 0;
         right: 0; */
@@ -475,7 +476,7 @@ ul.modal_notes_list {
         margin: 0 auto;
     }
     .ar_button a, .howto_button a {
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 10px 20px;
     }
     .modalWrapper {
@@ -492,7 +493,7 @@ ul.modal_notes_list {
 
     #d3model {
         width: 100vw;
-        height: 20vh;
+        height: 40vh;
 
         display: block;
         margin: 0 auto;
@@ -511,7 +512,7 @@ ul.modal_notes_list {
         margin: 0 auto;
     }
     .ar_button a, .howto_button a {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         padding: 12px 24px;
     }
 }
@@ -524,7 +525,7 @@ ul.modal_notes_list {
 
     #d3model {
         width: 100vw;
-        height: 35vh;
+        height: 50vh;
         /* position: fixed;
         top: 0;
         right: 0; */
@@ -542,6 +543,11 @@ ul.modal_notes_list {
         object-fit: cover; /* Đảm bảo hình ảnh không bị kéo giãn hoặc biến dạng */
         display: block;
         margin: 0 auto;
+    }
+
+    .ar_button a, .howto_button a {
+        font-size: 1.5rem;
+        padding: 12px 24px;
     }
 }
 

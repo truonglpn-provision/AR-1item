@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     Array.from(elements).forEach(e => {
       e.addEventListener("click", function () {
         console.log()
-        const modelViewer = document.getElementById("3dmodel");
+        const modelViewer = document.getElementById("d3model");
         if (modelViewer && modelViewer.activateAR) {
           modelViewer.activateAR();
         } else {
