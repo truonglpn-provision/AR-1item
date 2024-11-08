@@ -1,8 +1,8 @@
 $(function () {
   // Ẩn modal khi DOM được tải
-  // $("#modalArea").hide();
+  $("#modalArea").hide();
 
-  $(".title, .ar_container").css("display", "none");
+  $(".title, .ar_container").css("display", "flex");
 
   $("#openModal").click(function () {
     $("#modalArea").fadeIn();
