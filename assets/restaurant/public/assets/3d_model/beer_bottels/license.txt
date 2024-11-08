@@ -1,0 +1,11 @@
+Model Information:
+* title:	Beer Bottels
+* source:	https://sketchfab.com/3d-models/beer-bottels-41d3b6e39d614e809583868874e7d66a
+* author:	wingstech.3d (https://sketchfab.com/wingstech.3d)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Beer Bottels" (https://sketchfab.com/3d-models/beer-bottels-41d3b6e39d614e809583868874e7d66a) by wingstech.3d (https://sketchfab.com/wingstech.3d) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
