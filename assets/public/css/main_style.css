@@ -125,3 +125,65 @@ body {
 .cta-button:hover {
     background-color: #457b9d;
 }
+
+/* Responsive adjustments */
+/* Media Queries cho các màn hình lớn hơn 1200px */
+@media (min-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Media Queries cho các màn hình từ 992px đến 1199px */
+@media (max-width: 1199px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Media Queries cho các màn hình từ 768px đến 991px */
+@media (max-width: 991px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .product-card {
+        padding: 10px;
+    }
+
+    .img_product {
+        max-height: 180px;
+    }
+}
+
+/* Media Queries cho các màn hình nhỏ hơn 768px */
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .product-card {
+        padding: 15px;
+    }
+
+    .img_product {
+        max-height: 160px;
+    }
+}
+
+/* Media Queries cho các màn hình rất nhỏ (dưới 480px) */
+@media (max-width: 480px) {
+    .header img {
+        height: 50px;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
