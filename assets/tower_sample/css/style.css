@@ -1,0 +1,553 @@
+/* Định nghĩa Biến */
+:root {
+    --font-primary: 'Noto Sans', sans-serif;
+    --color-primary: #016D76;
+    --color-accent: #FFD700;
+    --color-highlight: #F9D615;
+    --color-text: #ffffff;
+    --color-secondary-bg: #004d66;
+    --button-hover-bg: #ffcc00;
+}
+
+/* Phong cách tổng thể */
+body {
+    font-family: var(--font-primary);
+    background: linear-gradient(200deg, #eff7ff, #00CFFF);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100vh; 
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Đưa figure ra giữa */
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+   
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%;
+    z-index: 9998;
+}
+
+.menas_logo, .prrv_logo {
+    object-fit: contain; /* Giữ tỷ lệ logo */
+}
+
+.menas_logo {
+    height: 100px;
+    width: 200px;
+    padding-left: 10px;
+}
+.prrv_logo {
+    height: 100px;
+    width: 90px;
+    padding-right: 10px ;
+}
+
+.modal_img {
+    max-width: 100%;
+    max-height: 80vh; /* Đặt chiều cao tối đa là 80% chiều cao của viewport */
+    width: auto;
+    height: auto;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+
+
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    
+    color: #FFD700; /* Màu vàng làm màu chính */
+    background: linear-gradient(135deg, #FFD700, #FF4500); /* Gradient từ vàng sang đỏ cam */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Chỉ hiển thị gradient trên chữ */
+    animation: shine 3s ease-in-out infinite; /* Hiệu ứng sáng lấp lánh */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Bóng đổ nhẹ */
+    position: relative;
+    z-index: 10000;
+}
+
+.center img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; Chiều cao toàn màn hình */
+    position: relative;
+    z-index: 10000;
+}
+
+
+
+
+/* Định kiểu cho dòng chữ nổi */
+.floating-text {
+    position: absolute;
+    top: 50px; /* Khoảng cách từ đầu trang, điều chỉnh cho phù hợp */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #FFA500; /* Màu chữ nổi bật, có thể là màu vàng cam */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Đổ bóng chữ để nổi bật */
+    background-color: rgba(255, 255, 255, 0.8); /* Nền mờ để dễ đọc hơn */
+    padding: 10px 20px;
+    border-radius: 8px;
+    z-index: 10; /* Đảm bảo nằm phía trên nội dung khác */
+}
+
+.page_content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*container*/
+.ar_container {
+    display: flex;
+    flex-direction: row;
+    /* position: absolute; */
+    /* bottom: 20px; Đặt container cách mép dưới màn hình */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    gap: 15px;
+    z-index: 9998;
+    bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    /* margin: 20px; */
+}
+
+/* Căn chỉnh cho phần chứa các nút */
+.ar_container_button {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa hai nút */
+}
+
+
+/* button */
+button, .ar_button a, .howto_button a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    width: 100%;
+}
+
+.ar_button a, .howto_button a {
+    padding: 12px 24px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    background: linear-gradient(135deg, #FFD700, #FFA500); /* Hiệu ứng gradient */
+    box-shadow: 0px 8px 15px rgba(0, 115, 255, 0.3); /* Bóng đổ mềm */
+}
+
+.ar_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.ar_button a {
+    background-color: #0095A2;
+    color: var(--color-primary);
+    width: 100%;
+    max-width: 300px; /* Giới hạn chiều rộng */
+    height: auto;
+    padding: 15px;
+}
+
+.howto_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.howto_button a {
+    background-color: #0095A2;
+    color: var(--color-text);
+    width: 100%;
+    max-width: 300px; /* Giới hạn chiều rộng */
+    padding: 15px;
+}
+
+.ar_button a:hover, .howto_button a:hover {
+    
+    background: linear-gradient(135deg, #ff6a00, #ee0979); /* Chuyển màu gradient khi hover */
+    box-shadow: 0px 12px 20px rgba(238, 9, 121, 0.4); /* Bóng đổ đậm hơn khi hover */
+}
+
+/* Chỉnh sửa thêm khoảng cách cho nút */
+.ar_button a, .howto_button a {
+    margin: 0 auto;
+}
+
+/* Phong cách chung cho các nút */
+.ar_mode {
+    background-color: #FF9900; /* Màu nền nổi bật */
+    color: #FFFFFF; /* Màu chữ trắng */
+    padding: 15px 30px; /* Khoảng cách bên trong nút */
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Hiệu ứng chuyển tiếp */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng ban đầu */
+}
+
+
+
+/* Hiệu ứng khi nhấn vào nút */
+.ar_mode:active {
+    transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Giảm đổ bóng khi nhấn */
+}
+
+
+
+/* Căn chỉnh cho phần subtext */
+.div_subtext {
+    font-size: 0.7rem;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    
+    position: fixed;
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 60px;
+}
+
+
+/* Căn chỉnh cho phần chứa các nút */
+.ar_container_button {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa hai nút */
+}
+
+
+
+/* Modal */
+#modalArea {
+    position: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Nền tối với độ mờ */
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalWrapper {
+    background-color: #005f73;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal_title {
+    font-size: 1.5em;
+    color: var(--color-accent);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal_textarea_text, .modal_notes_text {
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.modal_img, .modal_img2 {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+ul.modal_notes_list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    color: var(--color-accent);
+}
+
+
+/* Close Button */
+
+/* Close Button Container */
+.closeModal2 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #d32f2f; /* Màu đỏ cho nút */
+    padding: 16px;
+    border-radius: 12px; /* Bo góc mềm mại */
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Bóng đổ nhẹ cho nút */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hiệu ứng khi hover trên nút đóng */
+.closeModal2:hover {
+    background-color: #ff6f61; /* Màu nền thay đổi khi di chuột */
+    transform: scale(1.05); /* Phóng to nhẹ khi di chuột */
+}
+
+/* Icon X với hiệu ứng 3D */
+.closeModal2 i {
+    font-size: 1.6em;
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 0px #b71c1c, 2px 2px 0px #ff5252, 3px 3px 5px rgba(0, 0, 0, 0.3); /* Hiệu ứng 3D cho dấu X */
+}
+
+
+/* Phong cách cho phần bản quyền */
+.copyright {
+    background: linear-gradient(135deg, #007BFF, #00CFFF); /* Màu gradient xanh */
+    color: #FFFFFF; /* Màu chữ trắng */
+    padding: 10px 20px; /* Khoảng cách bên trong để dễ nhìn */
+    text-align: center; /* Căn giữa nội dung */
+    font-weight: bold; /* Tô đậm chữ để dễ đọc */
+    border-radius: 8px; /* Bo tròn các góc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+    margin-top: 20px; /* Tạo khoảng cách phía trên */
+    transition: transform 0.3s ease, background 0.3s ease; /* Hiệu ứng chuyển động */
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* Hiệu ứng khi hover */
+.copyright:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    background: linear-gradient(135deg, #00CFFF, #007BFF); /* Đổi hướng gradient khi hover */
+}
+
+#ar_work_logo {
+    max-width: 100px; /* Điều chỉnh kích thước logo */
+    height: auto;
+}
+
+.copyright_text {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+/* animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes shine {
+    0% {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FF4500, 0 0 40px #FF4500, 0 0 50px #FF4500;
+    }
+    50% {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 30px #FFD700, 0 0 40px #FFD700, 0 0 50px #FFD700;
+    }
+    100% {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FF4500, 0 0 40px #FF4500, 0 0 50px #FF4500;
+    }
+}
+
+
+
+
+/* Responsive */
+
+/* Thiết lập cho màn hình nhỏ hơn 600px (điện thoại di động) */
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    #d3model {
+        width: 100vw;
+        height: 40vh;
+        /* position: fixed;
+        top: 0;
+        right: 0; */
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        z-index: 9999;
+    }
+    
+  
+    .center img, .modal_img {
+        width: 80%;
+        max-width: 250px;
+        height: auto;
+        object-fit: cover; /* Đảm bảo hình ảnh lấp đầy khung mà không biến dạng */
+        display: block;
+        margin: 0 auto;
+    }
+    .ar_button a, .howto_button a {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+    .modalWrapper {
+        width: 90%;
+    }
+}
+
+
+/* Thiết lập cho màn hình tablet (600px - 768px) */
+@media (min-width: 600px) and (max-width: 768px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    #d3model {
+        width: 100vw;
+        height: 40vh;
+
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        z-index: 9999;
+        
+    }
+    
+
+    .center img, .modal_img {
+        width: 70%;
+        max-width: 300px;
+        height: auto;
+        object-fit: cover; /* Đảm bảo hình ảnh hiển thị đẹp */
+        display: block;
+        margin: 0 auto;
+    }
+    .ar_button a, .howto_button a {
+        font-size: 1.3rem;
+        padding: 12px 24px;
+    }
+}
+
+/* Thiết lập cho màn hình lớn hơn (trên 768px) */
+@media (min-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    #d3model {
+        width: 100vw;
+        height: 50vh;
+        /* position: fixed;
+        top: 0;
+        right: 0; */
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        z-index: 9999;
+    }
+    
+
+    .center img, .modal_img {
+        width: 50%;
+        max-width: 400px;
+        height: auto;
+        object-fit: cover; /* Đảm bảo hình ảnh không bị kéo giãn hoặc biến dạng */
+        display: block;
+        margin: 0 auto;
+    }
+
+    .ar_button a, .howto_button a {
+        font-size: 1.5rem;
+        padding: 12px 24px;
+    }
+}
+
