@@ -21,12 +21,15 @@ body {
   max-width: 1200px;
   margin-bottom: 30px;
   padding: 10px;
+  flex-direction: column;
+  text-align: center;
 }
 
 .header img {
   height: 80px;
   width: auto;
 }
+
 
 .header h1 {
   font-size: 2rem;
@@ -35,6 +38,8 @@ body {
   flex: 1;
   margin-left: 20px;
 }
+
+
 
 /* Sidebar */
 .sidebar {
@@ -46,7 +51,7 @@ body {
     left: -260px;
     top: 0;
     padding: 20px;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
   }
   
@@ -68,6 +73,15 @@ body {
     transition: all 0.3s ease;
   }
   
+  .sidebar.active + .toggle-btn {
+    left: 270px; /* Đẩy toggle button ra khi sidebar mở */
+  }
+
+
+  .toggle-btn:hover {
+    transform: scale(1.1);
+  }
+
   .toggle-btn.active {
     left: 270px;
     color: #fff;
@@ -85,20 +99,14 @@ body {
     display: block;
   }
   
-  .toggle-btn .fa-times {
-    display: none;
-  }
-  
-  .toggle-btn.active .fa-times {
-    display: block;
-  }
 
   
 
 .sidebar-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
+
 
 .search-bar input {
   width: 100%;
@@ -110,22 +118,115 @@ body {
   color: #A0AEC0;
 }
 
+/* Tìm kiếm */
+.search-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 35px 8px 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #3498db;
+}
+
+.clear-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+  outline:none;
+}
+
+.clear-button:hover {
+  color: #e74c3c;
+}
+
+/* Tìm kiếm */
+.search-container {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 35px 8px 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size:16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #bdc3c7;
+  opacity: 0.8;
+}
+
+
+.search-input:focus {
+  border-color: #3498db;
+}
+
+.clear-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+}
+
+.clear-button:hover {
+  color: #e74c3c;
+}
+
+/* Hiển thị nút "X" khi có nội dung trong ô tìm kiếm */
+.search-input:not(:placeholder-shown) + .clear-button {
+  display: block;
+}
+
+
 .menu {
     list-style-type: none; /* Bỏ dấu chấm */
-    padding-left: 0; /* Loại bỏ khoảng cách bên trái */
+    padding: 0; /* Loại bỏ khoảng cách bên trái */
+    margin-top:20px;
 }
+
 
 .menu li a {
   display: flex;
   align-items: center;
+  text-decoration: none;
   padding: 10px;
   color: #fff;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  
+
+  font-size: 16px;
 }
 
 .menu li a i {
+  min-width: 24px;
   margin-right: 10px;
   font-size: 18px;
   color: #00acee;
@@ -133,7 +234,12 @@ body {
 
 .menu li:hover a {
   background-color: #444;
-  border-radius: 8px;
+  border-radius: 5px;
+}
+
+.menu li a span {
+  flex: 1;
+  display: inline-block;
 }
 
 .account-section a {
@@ -311,6 +417,27 @@ body {
   margin-bottom: 20px;
 }
 
+.star-rating {
+  display: flex;
+  cursor: pointer;
+}
+
+.star-rating i {
+  font-size: 32px;
+  color: #ccc; /* Màu mặc định cho các ngôi sao */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hiệu ứng hover từ trái qua phải */
+.star-rating i:hover,
+.star-rating i:hover ~ i {
+  color: #FFD700; /* Màu vàng cho sao khi hover */
+}
+
+.star-rating i.active {
+  color: #FFD700; /* Màu vàng cho sao đã được chọn */
+}
+
 .cta-button {
   text-decoration: none;
   background-color: #1d3557;
@@ -341,6 +468,8 @@ body {
 
 /* Media Queries cho các màn hình từ 768px đến 991px */
 @media (max-width: 991px) {
+
+  
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -356,10 +485,6 @@ body {
 
 /* Media Queries cho các màn hình nhỏ hơn 768px */
 @media (max-width: 767px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
-  }
 
   .sidebar {
     width: 200px;
@@ -390,6 +515,7 @@ body {
 @media (max-width: 480px) {
   .header img {
     height: 50px;
+  
   }
 
   .cta-button {

@@ -20,34 +20,31 @@
         </a>
       </div>
 
-
-     <button class="toggle-btn" onclick="toggleSidebar()">
-        <i class="fas fa-bars"></i>
-      </button>
-
+   
     <div class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <h2>ProVision VN</h2>
       </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search...">
+      <div class="search-container">
+        <input type="text" id="search-input" class="search-input" placeholder="Tìm kiếm...">
+        <button id="clear-button" class="clear-button">
+          <i class="fas fa-xmark"></i>
+        </button>
       </div>
       <div class="menu">
-        <!-- Bất động sản -->
-        <li><a href="#real-estate"><i class="fas fa-building"></i> Bất động sản</a></li>
-        <!-- Nhà hàng -->
-        <li><a href="#restaurant"><i class="fas fa-utensils"></i> Nhà hàng</a></li>
-        <!-- Sự kiện -->
-        <li><a href="#events"><i class="fas fa-calendar-check"></i> Sự kiện</a></li>
-        <!-- Photo Frame -->
-        <li><a href="#photo-frame"><i class="fas fa-camera-retro"></i> Photo Frame</a></li>
-        <!-- Linh tinh -->
-        <li><a href="#miscellaneous"><i class="fas fa-box-open"></i> Linh tinh</a></li>
+        <li><a href="#" data-category="all"><i class="fas fa-list"></i> Tất cả</a></li>
+        <li><a href="#" data-category="real-estate"><i class="fas fa-building"></i> Bất động sản</a></li>
+        <li><a href="#" data-category="interior"><i class="fas fa-couch"></i> Nội thất</a></li>
+        <li><a href="#" data-category="restaurant"><i class="fas fa-utensils"></i> Nhà hàng</a></li>
+        <li><a href="#" data-category="events"><i class="fas fa-calendar-check"></i> Sự kiện</a></li>
+        <li><a href="#" data-category="photo-frame"><i class="fas fa-camera-retro"></i> Photo Frame</a></li>
+        <li><a href="#" data-category="misc"><i class="fas fa-box-open"></i> Linh tinh</a></li>
       </div>
     </div>
+    <button id="toggle-btn" class="toggle-btn">
+      <i class="fas fa-bars"></i>
+    </button>
 
-      
-      
       
       <div class="container">
         <h1>Danh sách sản phẩm AR</h1>
