@@ -4,7 +4,7 @@
     "title": "Sản phẩm AR Tòa Nhà (Tower)",
     "image": "/assets/tower_sample/img/tower.jpg",
     "logo": "/assets/public/favicon.png",
-    "price": "1.000.000.000₫",
+    "price": "2.500",
     "description": "Mang đến trải nghiệm khám phá không gian kiến trúc thực tế ảo sống động, phù hợp cho các dự án bất động sản và giới thiệu tòa nhà",
     "link": "/tower",
     "category": "real-estate"
@@ -14,7 +14,7 @@
     "title": "Sản phẩm AR Menu tại Nhà Hàng",
     "image": "assets/restaurant/public/assets/images/new_menu2.png",
     "logo": "/assets/public/favicon.png",
-    "price": "1.000.000.000₫",
+    "price": "1.000",
     "description": "Thực đơn ảo giúp khách hàng khám phá món ăn theo cách tương tác, tạo trải nghiệm độc đáo và tăng doanh thu cho nhà hàng.",
     "link": "/restaurant",
     "category": "restaurant"
@@ -24,7 +24,7 @@
     "title": "Sản phẩm AR Cá Vàng (Menas Event)",
     "image": "/assets/goldfish/img/top_main.png",
     "logo": "/assets/public/favicon.png",
-    "price": "1.000.000.000₫",
+    "price": "700",
     "description": "Tạo hiệu ứng thu hút với hình ảnh cá vàng 3D chuyển động, hoàn hảo cho các sự kiện và triển lãm tương tác.",
     "link": "/goldfish",
     "category": "events"
@@ -34,7 +34,7 @@
     "title": "Sản phẩm AR Khủng Long (Menas Event)",
     "image": "/assets/dinosaur/img/top_main.png",
     "logo": "/assets/public/favicon.png",
-    "price": "1.000.000.000₫",
+    "price": "700",
     "description": "Trải nghiệm thế giới khủng long sống động với hiệu ứng thực tế ảo, thu hút sự chú ý và tương tác của khách hàng tại sự kiện.",
     "link": "/dinosaur",
     "category": "events"
@@ -44,7 +44,7 @@
     "title": "Sản phẩm AR Photo Frame Kuro Chan",
     "image": "/assets/kurochan/img/frame_2_3.png",
     "logo": "/assets/public/favicon.png",
-    "price": "1.000.000.000₫",
+    "price": "700",
     "description": "Mang đến trải nghiệm chụp ảnh AR sống động cùng Kuro Chan, tạo khung hình vui nhộn và tương tác trực tiếp. Hoàn hảo cho sự kiện, thu hút khách và để lại ấn tượng khó quên.",
     "link": "/kurochan",
     "category": "photo-frame"

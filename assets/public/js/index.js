@@ -75,7 +75,7 @@ function renderProducts(products) {
         <img src="${product.logo}" class="logo_overlay" alt="AR Logo" />
         <img class="img_product" src="${product.image}" alt="${product.title}" />
         <h2>${product.title}</h2>
-        <p class="price">${product.price}</p>
+        <p class="price">$${product.price}</p>
         <p class="description">${product.description}</p>
         
         <a href="${product.link}" class="cta-button">Xem sản phẩm</a>
