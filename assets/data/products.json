@@ -64,5 +64,16 @@
     "link": "https://demo-three-js-one.vercel.app/",
     "category": "interior",
     "system": "ios, android"
+  },
+  {
+    "id": 7,
+    "title": "Sản phẩm AR Photo Frame Phú Long Sale Grand Opening 3D",
+    "image": "https://via.placeholder.com/200x300?text=No+Image+Available",
+    "logo": "/assets/public/favicon.png",
+    "price": "700",
+    "description": "None!",
+    "link": "/phulong-sale-grand-opening",
+    "category": "photo-frame",
+    "system": "ios, android"
   }
 ]
