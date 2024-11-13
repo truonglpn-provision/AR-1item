@@ -8,7 +8,7 @@
     "description": "Mang đến trải nghiệm khám phá không gian kiến trúc thực tế ảo sống động, phù hợp cho các dự án bất động sản và giới thiệu tòa nhà",
     "link": "/tower",
     "category": "real-estate",
-    "system": "ios"
+    "system": "ios, android"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "description": "Thực đơn ảo giúp khách hàng khám phá món ăn theo cách tương tác, tạo trải nghiệm độc đáo và tăng doanh thu cho nhà hàng.",
     "link": "/restaurant",
     "category": "restaurant",
-    "system": "ios"
+    "system": "ios, android"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "description": "Tạo hiệu ứng thu hút với hình ảnh cá vàng 3D chuyển động, hoàn hảo cho các sự kiện và triển lãm tương tác.",
     "link": "/goldfish",
     "category": "events",
-    "system": "ios"
+    "system": "ios, android"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "description": "Trải nghiệm thế giới khủng long sống động với hiệu ứng thực tế ảo, thu hút sự chú ý và tương tác của khách hàng tại sự kiện.",
     "link": "/dinosaur",
     "category": "events",
-    "system": "ios"
+    "system": "ios, android"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "description": "Mang đến trải nghiệm chụp ảnh AR sống động cùng Kuro Chan, tạo khung hình vui nhộn và tương tác trực tiếp. Hoàn hảo cho sự kiện, thu hút khách và để lại ấn tượng khó quên.",
     "link": "/kurochan",
     "category": "photo-frame",
-    "system": "ios"
+    "system": "ios, android"
   },
   {
     "id": 6,
@@ -63,6 +63,6 @@
     "description": "Ứng dụng AR Nội Thất cho phép bạn thử đồ ngay trong nhà bằng điện thoại. Trực quan, dễ dùng, giúp bạn chọn nội thất chính xác về màu sắc và kích thước, tiết kiệm thời gian và tối ưu trải nghiệm mua sắm.",
     "link": "https://demo-three-js-one.vercel.app/",
     "category": "interior",
-    "system": "android"
+    "system": "ios, android"
   }
 ]

@@ -75,6 +75,7 @@ function renderProducts(products) {
       <div class="product-card" data-category="${product.category}">
         <img src="${product.logo}" class="logo_overlay" alt="AR Logo" />
         <img class="img_product" src="${product.image}" alt="${product.title}" />
+        ${generateIconContainer(product.system)}
         <h2>${product.title}</h2>
         <p class="price">$${product.price}</p>
         <p class="description">${product.description}</p>
@@ -84,10 +85,22 @@ function renderProducts(products) {
       </div>
     `;
     productGrid.innerHTML += productCard;
-
   });
 }
 
+function generateIconContainer(system) {
+  let icons = "";
+
+  if (system.includes("android")) {
+    icons += `<img class="android-icon" src="/assets/public/img/android.png" alt="Android">`;
+  }
+  
+  if (system.includes("ios")) {
+    icons += `<img class="ios-icon" src="/assets/public/img/iOS.png" alt="iOS">`;
+  }
+
+  return `<div class="icon-container">${icons}</div>`;
+}
 
 function generateStarRating(index) {
   return `
@@ -100,7 +113,6 @@ function generateStarRating(index) {
     </div>
   `;
 }
-
 
 function addStarRating(index) {
   const starContainer = document.querySelector(`[data-id="rating-${index}"]`);
@@ -129,8 +141,6 @@ function addStarRating(index) {
   });
 }
 
-
-
 function updateStars(stars, rating) {
   stars.forEach((star, index) => {
     if (index < rating) {
@@ -140,9 +150,6 @@ function updateStars(stars, rating) {
     }
   });
 }
-
-
-
 
 // Hàm lưu trữ dữ liệu vào localStorage
 function saveProductsToLocalStorage(products) {
@@ -157,7 +164,7 @@ async function fetchAndStoreProducts(dataSrc) {
 
 // Hàm lấy dữ liệu từ localStorage
 function getProductsFromLocalStorage() {
-  const storedData = localStorage.getItem('products');
+  const storedData = localStorage.getItem("products");
   if (!storedData) return [];
 
   const parsedData = JSON.parse(storedData);
@@ -166,7 +173,7 @@ function getProductsFromLocalStorage() {
   // Kiểm tra xem dữ liệu đã hết hạn chưa
   if (currentTime > parsedData.expiration) {
     // Dữ liệu đã hết hạn, xóa dữ liệu cũ và trả về mảng rỗng
-    localStorage.removeItem('products');
+    localStorage.removeItem("products");
     return [];
   }
 
@@ -193,9 +200,10 @@ function searchProducts(keyword) {
 function filterProductsByCategory(category) {
   const products = getProductsFromLocalStorage();
 
-  const filteredProducts = category === "all"
-  ? products
-  : products.filter(product => product.category === category);
+  const filteredProducts =
+    category === "all"
+      ? products
+      : products.filter((product) => product.category === category);
 
   renderProducts(filteredProducts);
 }
@@ -246,25 +254,24 @@ function handleMenuClick(event) {
   event.preventDefault();
 
   const category = event.target.getAttribute("data-category");
-  
+
   clearButton.style.display = searchInput.value ? "block" : "none";
   searchInput.value = event.target.textContent.trim();
 
   filterProductsByCategory(category);
 }
 
-
 function checkAndUpdateRefreshCount() {
-  let refreshCount = parseInt(localStorage.getItem('refreshCount')) || 0;
+  let refreshCount = parseInt(localStorage.getItem("refreshCount")) || 0;
   const products = getProductsFromLocalStorage(); // Lấy dữ liệu sản phẩm từ localStorage
 
   // Nếu đã đạt đến số lần refresh tối đa (5 lần) hoặc dữ liệu đã hết hạn
   if (refreshCount >= 5 || products.length === 0) {
     fetchAndStoreProducts(dataSrc); // Fetch lại dữ liệu từ API và lưu vào localStorage
-    localStorage.setItem('refreshCount', 0); // Reset lại số lần refresh
+    localStorage.setItem("refreshCount", 0); // Reset lại số lần refresh
   } else {
     // Tăng số lần refresh lên 1
-    localStorage.setItem('refreshCount', refreshCount + 1);
+    localStorage.setItem("refreshCount", refreshCount + 1);
   }
 }
 
@@ -273,8 +280,8 @@ function saveProductsToLocalStorageWithExpiration(products) {
   const currentTime = new Date().getTime(); // Thời gian hiện tại
   const dataToStore = {
     products: products,
-    expiration: currentTime + expirationTime // Thời gian hết hạn
+    expiration: currentTime + expirationTime, // Thời gian hết hạn
   };
 
-  localStorage.setItem('products', JSON.stringify(dataToStore));
+  localStorage.setItem("products", JSON.stringify(dataToStore));
 }
