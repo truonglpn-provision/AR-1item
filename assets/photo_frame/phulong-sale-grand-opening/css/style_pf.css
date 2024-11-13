@@ -638,7 +638,7 @@ body {
         width: auto;
         height: 20%;
         z-index: 1001;
-        display: none;
+        
     }
     .imgM{
         position: absolute;
@@ -843,7 +843,7 @@ body {
         width: 20vw;
         height: auto;
         z-index: 1001;
-        display: none;
+      
     }
     .imgS2{
         position: absolute;
@@ -876,6 +876,7 @@ body {
         width: 20%;
         height: auto;
         z-index: 5;
+        display: none;
     }
     #clock{
         width: auto;
@@ -886,6 +887,7 @@ body {
         left: 0px;
         top: 0px;
         z-index: 100;
+        display: none;
     }
     .imgC2{
         position: absolute;

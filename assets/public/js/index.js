@@ -77,14 +77,13 @@ function renderProducts(products) {
         <h2>${product.title}</h2>
         <p class="price">$${product.price}</p>
         <p class="description">${product.description}</p>
-        
+       
         <a href="${product.link}" class="cta-button">Xem sản phẩm</a>
+
       </div>
     `;
     productGrid.innerHTML += productCard;
 
-    // Gắn sự kiện đánh giá sao cho từng sản phẩm
-    
   });
 }
 
