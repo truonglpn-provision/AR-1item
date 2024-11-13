@@ -210,7 +210,7 @@
     document.addEventListener('touchmove', disableScroll, { passive: false });
     // 端末の向きが変化したときの処理
     window.addEventListener("orientationchange", () => {
-      resetToInitialPosition();
+      //resetToInitialPosition();
     });
   </script>
 
@@ -242,11 +242,7 @@
         <img class="stamp3 drag-and-drop" src="/assets/kurochan/img/stamp_3.png" />
         <img class="imgS" onClick="switchCamera()" src="/assets/kurochan/img/camera_2.png" />
         <img class="imgS2" onClick="switchImages()" src="/assets/kurochan/img/kirikae_2.png" />
-        <div class="stampBs">
-          <img class="stampB1" onClick="switchStamps(0)" src="/assets/kurochan/img/stamp_button_1.png" />
-          <img class="stampB2" onClick="switchStamps(1)" src="/assets/kurochan/img/stamp_button_2.png" />
-          <img class="stampB3" onClick="switchStamps(2)" src="/assets/kurochan/img/stamp_button_3.png" />
-        </div>
+       
       </div>
 
       <!-- フラッシュスクリーン -->
@@ -391,37 +387,7 @@
       $(img_C3).css("left", 0);
     }
   }
-  function switchStamps(stampNum) {
-    stampVis[stampNum] = !stampVis[stampNum];
-    if (stampNum == 0) {
-      if (stampVis[stampNum]) {
-        $(img_S1).css("display", "block");
-        $(img_S1).css("animation", "pop 0.7s forwards");
-        $(img_Sb1).animate({ width: '100%' }, 200);
-      } else {
-        $(img_S1).css("display", "none");
-        $(img_Sb1).animate({ width: '75%' }, 200);
-      }
-    } else if (stampNum == 1) {
-      if (stampVis[stampNum]) {
-        $(img_S2).css("animation", "pop 0.7s forwards");
-        $(img_S2).css("display", "block");
-        $(img_Sb2).animate({ width: '100%' }, 200);
-      } else {
-        $(img_S2).css("display", "none");
-        $(img_Sb2).animate({ width: '75%' }, 200);
-      }
-    } else if (stampNum == 2) {
-      if (stampVis[stampNum]) {
-        $(img_S3).css("animation", "pop 0.7s forwards");
-        $(img_S3).css("display", "block");
-        $(img_Sb3).animate({ width: '100%' }, 200);
-      } else {
-        $(img_S3).css("display", "none");
-        $(img_Sb3).animate({ width: '75%' }, 200);
-      }
-    }
-  }
+
 </script>
 
 <script>
@@ -650,46 +616,32 @@
       var vHeight = winHeight * sizeOffset * deviceOffset;
 
       //imgのサイズと配置を調整
-      var iPos_1 = $('.img1').position();
-      var iWidth_1 = img_1.width * sizeOffset
-      var iHeight_1 = img_1.height * sizeOffset
-      var iLeft_1 = iPos_1.left * sizeOffset
-      var iTop_1 = iPos_1.top * sizeOffset
-      var iPos_2 = $('.img2').position();
-      var iWidth_2 = img_2.width * sizeOffset
-      var iHeight_2 = img_2.height * sizeOffset
-      var iLeft_2 = iPos_2.left * sizeOffset
-      var iTop_2 = iPos_2.top * sizeOffset
+      // var iPos_1 = $('.img1').position();
+      // var iWidth_1 = img_1.width * sizeOffset
+      // var iHeight_1 = img_1.height * sizeOffset
+      // var iLeft_1 = iPos_1.left * sizeOffset
+      // var iTop_1 = iPos_1.top * sizeOffset
+      // var iPos_2 = $('.img2').position();
+      // var iWidth_2 = img_2.width * sizeOffset
+      // var iHeight_2 = img_2.height * sizeOffset
+      // var iLeft_2 = iPos_2.left * sizeOffset
+      // var iTop_2 = iPos_2.top * sizeOffset
       var iPos_3 = $('.img3').position();
       var iWidth_3 = img_3.width * sizeOffset
       var iHeight_3 = img_3.height * sizeOffset
       var iLeft_3 = iPos_3.left * sizeOffset
       var iTop_3 = iPos_3.top * sizeOffset
-      var iPos_4 = $('.img4').position();
-      var iWidth_4 = img_4.width * sizeOffset
-      var iHeight_4 = img_4.height * sizeOffset
-      var iLeft_4 = iPos_4.left * sizeOffset
-      var iTop_4 = iPos_4.top * sizeOffset
-      var iPos_C = $('.imgC').position();
-      var iWidth_C = imgC.width * sizeOffset
-      var iHeight_C = imgC.height * sizeOffset
-      var iLeft_C = iPos_C.left * sizeOffset
-      var iTop_C = iPos_C.top * sizeOffset
-      var iPos_S1 = $('.stamp1').position();
-      var iWidth_S1 = img_S1.width * sizeOffset
-      var iHeight_S1 = img_S1.height * sizeOffset
-      var iLeft_S1 = iPos_S1.left * sizeOffset
-      var iTop_S1 = iPos_S1.top * sizeOffset
-      var iPos_S2 = $('.stamp2').position();
-      var iWidth_S2 = img_S2.width * sizeOffset
-      var iHeight_S2 = img_S2.height * sizeOffset
-      var iLeft_S2 = iPos_S2.left * sizeOffset
-      var iTop_S2 = iPos_S2.top * sizeOffset
-      var iPos_S3 = $('.stamp3').position();
-      var iWidth_S3 = img_S3.width * sizeOffset
-      var iHeight_S3 = img_S3.height * sizeOffset
-      var iLeft_S3 = iPos_S3.left * sizeOffset
-      var iTop_S3 = iPos_S3.top * sizeOffset
+      // var iPos_4 = $('.img4').position();
+      // var iWidth_4 = img_4.width * sizeOffset
+      // var iHeight_4 = img_4.height * sizeOffset
+      // var iLeft_4 = iPos_4.left * sizeOffset
+      // var iTop_4 = iPos_4.top * sizeOffset
+      // var iPos_C = $('.imgC').position();
+      // var iWidth_C = imgC.width * sizeOffset
+      // var iHeight_C = imgC.height * sizeOffset
+      // var iLeft_C = iPos_C.left * sizeOffset
+      // var iTop_C = iPos_C.top * sizeOffset
+    
 
       if (window_now === 1) {
         vWidth = winWidth * sizeOffset;
@@ -726,16 +678,16 @@
 
       //canvasに画像を描画（後に描くほどレイヤーが上になる）
       if (scene == 0) {
-        resizedContext.drawImage(img_4, iLeft_4, iTop_4, iWidth_4, iHeight_4);
         resizedContext.drawImage(img_3, iLeft_3, iTop_3, iWidth_3, iHeight_3);
-        resizedContext.drawImage(img_2, iLeft_2, iTop_2, iWidth_2, iHeight_2);
-        resizedContext.drawImage(img_1, iLeft_1, iTop_1, iWidth_1, iHeight_1);
+        // resizedContext.drawImage(img_4, iLeft_4, iTop_4, iWidth_4, iHeight_4);
+        // resizedContext.drawImage(img_2, iLeft_2, iTop_2, iWidth_2, iHeight_2);
+        // resizedContext.drawImage(img_1, iLeft_1, iTop_1, iWidth_1, iHeight_1);
         
       } else if (scene == 1) {
         resizedContext.drawImage(img_3, iLeft_3, iTop_3, iWidth_3, iHeight_3);
-        resizedContext.drawImage(img_4, iLeft_4, iTop_4, iWidth_4, iHeight_4);
-        resizedContext.drawImage(img_2, iLeft_2, iTop_2, iWidth_2, iHeight_2);
-        resizedContext.drawImage(img_1, iLeft_1, iTop_1, iWidth_1, iHeight_1);
+        // resizedContext.drawImage(img_4, iLeft_4, iTop_4, iWidth_4, iHeight_4);
+        // resizedContext.drawImage(img_2, iLeft_2, iTop_2, iWidth_2, iHeight_2);
+        // resizedContext.drawImage(img_1, iLeft_1, iTop_1, iWidth_1, iHeight_1);
         
       }
 
@@ -756,15 +708,15 @@
       // resizedContext.restore();
 
       //スタンプ描画
-      if (stampVis[0]) {
-        resizedContext.drawImage(img_S1, iLeft_S1, iTop_S1, iWidth_S1, iHeight_S1);
-      }
-      if (stampVis[1]) {
-        resizedContext.drawImage(img_S2, iLeft_S2, iTop_S2, iWidth_S2, iHeight_S2);
-      }
-      if (stampVis[2]) {
-        resizedContext.drawImage(img_S3, iLeft_S3, iTop_S3, iWidth_S3, iHeight_S3);
-      }
+      // if (stampVis[0]) {
+      //   resizedContext.drawImage(img_S1, iLeft_S1, iTop_S1, iWidth_S1, iHeight_S1);
+      // }
+      // if (stampVis[1]) {
+      //   resizedContext.drawImage(img_S2, iLeft_S2, iTop_S2, iWidth_S2, iHeight_S2);
+      // }
+      // if (stampVis[2]) {
+      //   resizedContext.drawImage(img_S3, iLeft_S3, iTop_S3, iWidth_S3, iHeight_S3);
+      // }
 
       return resizedCanvas.toDataURL('image/png');
     }
