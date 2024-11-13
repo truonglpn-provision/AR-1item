@@ -4,7 +4,7 @@ const searchInput = document.getElementById("search-input");
 const clearButton = document.getElementById("clear-button");
 const sidebar = document.getElementById("sidebar");
 const toggleBtn = document.getElementById("toggle-btn");
-
+const REFRESH_RESET = 5;
 let debounceTimer;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initSidebar();
   initializeMenuFilters();
 
+  checkAndUpdateRefreshCount();
   displayProducts();
 });
 
@@ -150,14 +151,26 @@ function saveProductsToLocalStorage(products) {
 
 async function fetchAndStoreProducts(dataSrc) {
   const products = await getProducts(dataSrc);
-  saveProductsToLocalStorage(products);
+  saveProductsToLocalStorageWithExpiration(products);
   renderProducts(products);
 }
 
 // Hàm lấy dữ liệu từ localStorage
 function getProductsFromLocalStorage() {
-  const products = localStorage.getItem("products");
-  return products ? JSON.parse(products) : [];
+  const storedData = localStorage.getItem('products');
+  if (!storedData) return [];
+
+  const parsedData = JSON.parse(storedData);
+  const currentTime = new Date().getTime();
+
+  // Kiểm tra xem dữ liệu đã hết hạn chưa
+  if (currentTime > parsedData.expiration) {
+    // Dữ liệu đã hết hạn, xóa dữ liệu cũ và trả về mảng rỗng
+    localStorage.removeItem('products');
+    return [];
+  }
+
+  return parsedData.products || [];
 }
 
 function searchProducts(keyword) {
@@ -229,15 +242,39 @@ function initializeMenuFilters() {
   });
 }
 
-// Hàm xử lý khi người dùng nhấn vào một mục menu
 function handleMenuClick(event) {
   event.preventDefault();
 
-  // Lấy giá trị data-category từ menu
   const category = event.target.getAttribute("data-category");
   
   clearButton.style.display = searchInput.value ? "block" : "none";
   searchInput.value = event.target.textContent.trim();
 
   filterProductsByCategory(category);
+}
+
+
+function checkAndUpdateRefreshCount() {
+  let refreshCount = parseInt(localStorage.getItem('refreshCount')) || 0;
+  const products = getProductsFromLocalStorage(); // Lấy dữ liệu sản phẩm từ localStorage
+
+  // Nếu đã đạt đến số lần refresh tối đa (5 lần) hoặc dữ liệu đã hết hạn
+  if (refreshCount >= 5 || products.length === 0) {
+    fetchAndStoreProducts(dataSrc); // Fetch lại dữ liệu từ API và lưu vào localStorage
+    localStorage.setItem('refreshCount', 0); // Reset lại số lần refresh
+  } else {
+    // Tăng số lần refresh lên 1
+    localStorage.setItem('refreshCount', refreshCount + 1);
+  }
+}
+
+function saveProductsToLocalStorageWithExpiration(products) {
+  const expirationTime = 10 * 60 * 1000; // 10 phút = 600,000 ms
+  const currentTime = new Date().getTime(); // Thời gian hiện tại
+  const dataToStore = {
+    products: products,
+    expiration: currentTime + expirationTime // Thời gian hết hạn
+  };
+
+  localStorage.setItem('products', JSON.stringify(dataToStore));
 }
