@@ -741,19 +741,19 @@
 
       //時計を描画
       resizedContext.drawImage(imgC, iLeft_C, iTop_C, iWidth_C, iHeight_C);
-      // imgC3 を回転させて描画
-      resizedContext.save();
-      resizedContext.translate(iLeft_C + iWidth_C / 2, iTop_C + iHeight_C / 2);
-      resizedContext.rotate(minutesAngle * Math.PI / 180);
-      resizedContext.drawImage(imgC3, -iWidth_C / 2, -iHeight_C / 2, iWidth_C, iHeight_C);
-      resizedContext.restore();
+      // // imgC3 を回転させて描画
+      // resizedContext.save();
+      // resizedContext.translate(iLeft_C + iWidth_C / 2, iTop_C + iHeight_C / 2);
+      // resizedContext.rotate(minutesAngle * Math.PI / 180);
+      // resizedContext.drawImage(imgC3, -iWidth_C / 2, -iHeight_C / 2, iWidth_C, iHeight_C);
+      // resizedContext.restore();
 
-      // imgC2 を回転させて描画
-      resizedContext.save();
-      resizedContext.translate(iLeft_C + iWidth_C / 2, iTop_C + iHeight_C / 2);
-      resizedContext.rotate(hoursAngle * Math.PI / 180);
-      resizedContext.drawImage(imgC2, -iWidth_C / 2, -iHeight_C / 2, iWidth_C, iHeight_C);
-      resizedContext.restore();
+      // // imgC2 を回転させて描画
+      // resizedContext.save();
+      // resizedContext.translate(iLeft_C + iWidth_C / 2, iTop_C + iHeight_C / 2);
+      // resizedContext.rotate(hoursAngle * Math.PI / 180);
+      // resizedContext.drawImage(imgC2, -iWidth_C / 2, -iHeight_C / 2, iWidth_C, iHeight_C);
+      // resizedContext.restore();
 
       //スタンプ描画
       if (stampVis[0]) {
