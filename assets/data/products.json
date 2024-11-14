@@ -45,9 +45,9 @@
   },
   {
     "id": 5,
-    "title": "Sản phẩm AR Photo Frame Kuro Chan",
+    "title": "Sản phẩm Canva Photo Frame Kuro Chan",
     "image": "/assets/kurochan/img/frame_2_3.png",
-    "logo": "/assets/public/favicon.png",
+    "logo": "/assets/public/img/canvas.jpeg",
     "price": "700",
     "description": "Mang đến trải nghiệm chụp ảnh AR sống động cùng Kuro Chan, tạo khung hình vui nhộn và tương tác trực tiếp. Hoàn hảo cho sự kiện, thu hút khách và để lại ấn tượng khó quên.",
     "link": "/kurochan",
@@ -67,11 +67,11 @@
   },
   {
     "id": 7,
-    "title": "Sản phẩm AR Photo Frame Phú Long Sale Grand Opening 3D",
-    "image": "https://via.placeholder.com/200x300?text=No+Image+Available",
-    "logo": "/assets/public/favicon.png",
+    "title": "Sản phẩm Canva Photo Frame Phú Long Sale Grand Opening",
+    "image": "/assets/photo_frame/phulong-sale-grand-opening/img/pl_img_product.jpg",
+    "logo": "/assets/public/img/canvas.jpeg",
     "price": "700",
-    "description": "None!",
+    "description": "Chào mừng khai trương, Khung Ảnh Phú Long Pavilion mang đến một trải nghiệm mới trong việc trang trí không gian. Với thiết kế hiện đại, sang trọng, sản phẩm này giúp bạn lưu giữ những khoảnh khắc đẹp trong một khung hình tuyệt vời.",
     "link": "/phulong-sale-grand-opening",
     "category": "photo-frame",
     "system": "ios, android"
