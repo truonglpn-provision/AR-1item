@@ -374,11 +374,15 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+
 }
 
 .product-card:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+
 
 .product-card .img_product {
   width: 300px;
@@ -387,6 +391,27 @@ body {
   margin-bottom: 15px;
   object-fit: cover;
 }
+
+.product-card .description {
+  text-align: justify; 
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  transition: all 0.9s ease; /* Hiệu ứng chuyển tiếp khi hover */
+}
+
+.product-card:hover .description {
+  -webkit-line-clamp: unset; /* Hiển thị đầy đủ mô tả khi hover */
+  display: block;
+  overflow: visible; /* Cho phép phần mô tả hiển thị đầy đủ */
+}
+
 
 .product-card h2 {
   font-size: 1.5rem;
@@ -402,7 +427,7 @@ body {
   height: auto; /* Đảm bảo tỷ lệ logo */
   object-fit: contain; /* Đảm bảo logo không bị cắt */
   z-index: 2; /* Đảm bảo logo nằm trên các phần tử khác */
-  border-radius: 5px; /* Bo tròn góc cho logo nếu cần */
+  border-radius: 50px; /* Bo tròn góc cho logo nếu cần */
 }
 
 .price {
@@ -411,12 +436,13 @@ body {
   margin-bottom: 10px;
 }
 
-.description {
+
+/* .description {
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 20px;
   
-}
+} */
 
 
 .star-rating {
