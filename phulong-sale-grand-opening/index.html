@@ -34,7 +34,7 @@
   <!-- 画像のプリロード -->
   <script>
     // 画像パス
-    var imgPath = [["/assets/kurochan/img/frame_1_1.png", "/assets/kurochan/img/frame_1_2.png", "/assets/kurochan/img/frame_1_3.png", "/assets/kurochan/img/frame_1_4.png", "/assets/kurochan/img/kirikae_2.png"],
+    var imgPath = [["/assets/kurochan/img/frame_1_1.png", "/assets/kurochan/img/frame_1_2.png", "/assets/kurochan/img/frame_1_3.png", "/assets/photo_frame/phulong-sale-grand-opening/img/pl_top-rmbg.png", "/assets/kurochan/img/kirikae_2.png"],
     ["/assets/kurochan/img/frame_2_1.png", "/assets/photo_frame/phulong-sale-grand-opening/PhuLong_Sale_Grand-Opening_FINAL.png", "/assets/photo_frame/phulong-sale-grand-opening/PhuLong_Sale_Grand-Opening_FINAL.png", "/assets/kurochan/img/frame_2_4.png?1", "/assets/kurochan/img/kirikae_1.png"]];
     var clockPath = [["/assets/kurochan/img/clock_1.png", "/assets/kurochan/img/clock_1_hor.png", "/assets/kurochan/img/clock_1_min.png"],
     ["/assets/kurochan/img/clock_2.png", "/assets/kurochan/img/clock_2_hor.png", "/assets/kurochan/img/clock_2_min.png"]];
@@ -232,8 +232,8 @@
         <img class="img1" src="/assets/kurochan/img/frame_1_1.png" />
         
         <img class="img2" src="/assets/kurochan/img/frame_1_2.png" />
-        <img class="img3" src="/assets/photo_frame/phulong-sale-grand-opening/img/PhuLong_Sale_Grand-Opening_FINAL-removebg.png" />
-        <img class="img4" src="/assets/kurochan/img/frame_1_4.png" />
+        <img class="img3" src="/assets/photo_frame/phulong-sale-grand-opening/img/pl_down-rmbg.png" />
+        <img class="img4" src="/assets/photo_frame/phulong-sale-grand-opening/img/pl_top-rmbg.png" />
         <img class="imgC" src="/assets/kurochan/img/clock_1.png" />
         <img class="imgC2" src="/assets/kurochan/img/clock_1_hor.png" />
         <img class="imgC3" src="/assets/kurochan/img/clock_1_min.png" />
@@ -298,8 +298,8 @@
 <script>
   var img_1 = document.querySelector(".img1");
   var img_2 = document.querySelector(".img2");
-  var img_3 = document.querySelector(".img3");
-  var img_4 = document.querySelector(".img4");
+  var imgDown = document.querySelector(".img3");
+  var imgTop = document.querySelector(".img4");
   var img_Sw2 = document.querySelector(".imgS2");
   var img_C = document.querySelector(".imgC");
   var img_C2 = document.querySelector(".imgC2");
@@ -313,8 +313,8 @@
   var scene = 0;
   var isAnimating = false;
   var stampVis = [false, false, false];
-  var imgPath = [["/assets/kurochan/img/frame_1_1.png", "/assets/kurochan/img/frame_1_2.png", "/assets/kurochan/img/frame_1_3.png", "/assets/kurochan/img/frame_1_4.png", "/assets/kurochan/img/kirikae_2.png"],
-  ["/assets/kurochan/img/frame_2_1.png", "/assets/photo_frame/phulong-sale-grand-opening/img/PhuLong_Sale_Grand-Opening_FINAL-removebg.png", "/assets/photo_frame/phulong-sale-grand-opening/img/PhuLong_Sale_Grand-Opening_FINAL-removebg.png", "/assets/kurochan/img/frame_2_4.png?1", "/assets/kurochan/img/kirikae_1.png"]];
+  var imgPath = [["/assets/kurochan/img/frame_1_1.png", "/assets/kurochan/img/frame_1_2.png", "/assets/kurochan/img/frame_1_3.png", "/assets/photo_frame/phulong-sale-grand-opening/img/pl_top-rmbg.png", "/assets/kurochan/img/kirikae_2.png"],
+  ["/assets/kurochan/img/frame_2_1.png", "/assets/photo_frame/phulong-sale-grand-opening/img/pl_down-rmbg.png", "/assets/photo_frame/phulong-sale-grand-opening/img/pl_down-rmbg.png", "/assets/kurochan/img/frame_2_4.png?1", "/assets/kurochan/img/kirikae_1.png"]];
   var clockPath = [["/assets/kurochan/img/clock_1.png", "/assets/kurochan/img/clock_1_hor.png", "/assets/kurochan/img/clock_1_min.png"],
   ["/assets/kurochan/img/clock_2.png", "/assets/kurochan/img/clock_2_hor.png", "/assets/kurochan/img/clock_2_min.png"]]
   function switchImages() {
@@ -341,13 +341,13 @@
       changeClock();
       $(img_1).attr("src", imgPath[scene][0]);
       $(img_2).attr("src", imgPath[scene][1]);
-      $(img_3).attr("src", imgPath[scene][2]);
-      $(img_4).attr("src", imgPath[scene][3]);
+      $(imgDown).attr("src", imgPath[scene][2]);
+      $(imgTop).attr("src", imgPath[scene][3]);
       $(img_Sw2).attr("src", imgPath[scene][4]);
       if (scene == 1) {
-        $(img_4).css("zIndex", 7);
+        $(imgTop).css("zIndex", 7);
       } else if (scene == 0) {
-        $(img_4).css("zIndex", 5);
+        $(imgTop).css("zIndex", 5);
       }
     }, 450)
     setTimeout(() => {
@@ -358,8 +358,8 @@
   function moveImg() {
     $(img_1).css("animation", "slide1 1s forwards");
     $(img_2).css("animation", "slide2 1s forwards");
-    $(img_3).css("animation", "slide3 1s forwards");
-    $(img_4).css("animation", "slide4 1s forwards");
+    $(imgDown).css("animation", "slide3 1s forwards");
+    $(imgTop).css("animation", "slide4 1s forwards");
     $(img_C).css("animation", "slideC 1s forwards");
     $(img_C2).css("animation", "slideC 1s forwards");
     $(img_C3).css("animation", "slideC 1s forwards");
@@ -367,8 +367,8 @@
   function removeAnim() {
     $(img_1).css("animation", "");
     $(img_2).css("animation", "");
-    $(img_3).css("animation", "");
-    $(img_4).css("animation", "");
+    $(imgDown).css("animation", "");
+    $(imgTop).css("animation", "");
     $(img_C).css("animation", "");
     $(img_C2).css("animation", "");
     $(img_C3).css("animation", "");
@@ -399,8 +399,8 @@
   var get_info = document.querySelector('#get-info');
   var img_1 = document.querySelector(".img1");
   var img_2 = document.querySelector(".img2");
-  var img_3 = document.querySelector(".img3");
-  var img_4 = document.querySelector(".img4");
+  var imgDown = document.querySelector(".img3");
+  var imgTop = document.querySelector(".img4");
   var imgC = document.querySelector('.imgC');
   var imgC2 = document.querySelector('.imgC2');
   var imgC3 = document.querySelector('.imgC3');
@@ -627,15 +627,15 @@
       // var iLeft_2 = iPos_2.left * sizeOffset
       // var iTop_2 = iPos_2.top * sizeOffset
       var iPos_3 = $('.img3').position();
-      var iWidth_3 = img_3.width * sizeOffset
-      var iHeight_3 = img_3.height * sizeOffset
+      var iWidth_3 = imgDown.width * sizeOffset
+      var iHeight_3 = imgDown.height * sizeOffset
       var iLeft_3 = iPos_3.left * sizeOffset
       var iTop_3 = iPos_3.top * sizeOffset
-      // var iPos_4 = $('.img4').position();
-      // var iWidth_4 = img_4.width * sizeOffset
-      // var iHeight_4 = img_4.height * sizeOffset
-      // var iLeft_4 = iPos_4.left * sizeOffset
-      // var iTop_4 = iPos_4.top * sizeOffset
+      var iPos_4 = $('.img4').position();
+      var iWidth_4 = imgTop.width * sizeOffset
+      var iHeight_4 = imgTop.height * sizeOffset
+      var iLeft_4 = iPos_4.left * sizeOffset
+      var iTop_4 = iPos_4.top * sizeOffset
       // var iPos_C = $('.imgC').position();
       // var iWidth_C = imgC.width * sizeOffset
       // var iHeight_C = imgC.height * sizeOffset
@@ -678,14 +678,14 @@
 
       //canvasに画像を描画（後に描くほどレイヤーが上になる）
       if (scene == 0) {
-        resizedContext.drawImage(img_3, iLeft_3, iTop_3, iWidth_3, iHeight_3);
-        // resizedContext.drawImage(img_4, iLeft_4, iTop_4, iWidth_4, iHeight_4);
+        resizedContext.drawImage(imgDown, iLeft_3, iTop_3, iWidth_3, iHeight_3);
+        resizedContext.drawImage(imgTop, iLeft_4, iTop_4, iWidth_4, iHeight_4);
         // resizedContext.drawImage(img_2, iLeft_2, iTop_2, iWidth_2, iHeight_2);
         // resizedContext.drawImage(img_1, iLeft_1, iTop_1, iWidth_1, iHeight_1);
         
       } else if (scene == 1) {
-        resizedContext.drawImage(img_3, iLeft_3, iTop_3, iWidth_3, iHeight_3);
-        // resizedContext.drawImage(img_4, iLeft_4, iTop_4, iWidth_4, iHeight_4);
+        resizedContext.drawImage(imgDown, iLeft_3, iTop_3, iWidth_3, iHeight_3);
+        resizedContext.drawImage(imgTop, iLeft_4, iTop_4, iWidth_4, iHeight_4);
         // resizedContext.drawImage(img_2, iLeft_2, iTop_2, iWidth_2, iHeight_2);
         // resizedContext.drawImage(img_1, iLeft_1, iTop_1, iWidth_1, iHeight_1);
         
