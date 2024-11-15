@@ -2,22 +2,22 @@
   {
     "id": 1,
     "title": "Sản phẩm AR Tòa Nhà (Tower)",
-    "image": "/assets/tower_sample/img/tower.jpg",
+    "image": "/assets/public/img/construct/tower.jpg",
     "logo": "/assets/public/img/general/favicon.png",
     "price": "2.500",
     "description": "Mang đến trải nghiệm khám phá không gian kiến trúc thực tế ảo sống động, phù hợp cho các dự án bất động sản và giới thiệu tòa nhà",
-    "link": "/tower",
+    "link": "/pages/tower",
     "category": "real-estate",
     "system": "ios, android"
   },
   {
     "id": 2,
     "title": "Sản phẩm AR Menu tại Nhà Hàng",
-    "image": "assets/restaurant/public/assets/images/new_menu2.png",
+    "image": "/assets/public/img/restaurant/new_menu2.png",
     "logo": "/assets/public/img/general/favicon.png",
     "price": "1.000",
     "description": "Thực đơn ảo giúp khách hàng khám phá món ăn theo cách tương tác, tạo trải nghiệm độc đáo và tăng doanh thu cho nhà hàng.",
-    "link": "/restaurant",
+    "link": "/pages/restaurant",
     "category": "restaurant",
     "system": "ios, android"
   },
@@ -28,7 +28,7 @@
     "logo": "/assets/public/img/general/favicon.png",
     "price": "700",
     "description": "Tạo hiệu ứng thu hút với hình ảnh cá vàng 3D chuyển động, hoàn hảo cho các sự kiện và triển lãm tương tác.",
-    "link": "/goldfish",
+    "link": "/pages/goldfish",
     "category": "events",
     "system": "ios, android"
   },
@@ -39,7 +39,7 @@
     "logo": "/assets/public/img/general/favicon.png",
     "price": "700",
     "description": "Trải nghiệm thế giới khủng long sống động với hiệu ứng thực tế ảo, thu hút sự chú ý và tương tác của khách hàng tại sự kiện.",
-    "link": "/dinosaur",
+    "link": "/pages/dinosaur",
     "category": "events",
     "system": "ios, android"
   },
@@ -50,7 +50,7 @@
     "logo": "/assets/public/img/general/canva.jpeg",
     "price": "700",
     "description": "Mang đến trải nghiệm chụp ảnh AR sống động cùng Kuro Chan, tạo khung hình vui nhộn và tương tác trực tiếp. Hoàn hảo cho sự kiện, thu hút khách và để lại ấn tượng khó quên.",
-    "link": "/kurochan",
+    "link": "/pages/kurochan",
     "category": "photo-frame",
     "system": "ios, android"
   },
@@ -72,7 +72,7 @@
     "logo": "/assets/public/img/general/canva.jpeg",
     "price": "700",
     "description": "Chào mừng khai trương, Khung Ảnh Phú Long Pavilion mang đến một trải nghiệm mới trong việc trang trí không gian. Với thiết kế hiện đại, sang trọng, sản phẩm này giúp bạn lưu giữ những khoảnh khắc đẹp trong một khung hình tuyệt vời.",
-    "link": "/phulong/sale-grand-opening",
+    "link": "/pages/phulong/sale-grand-opening",
     "category": "photo-frame",
     "system": "ios, android"
   }

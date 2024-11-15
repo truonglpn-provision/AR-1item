@@ -11,7 +11,7 @@ let debounceTimer;
 document.addEventListener("DOMContentLoaded", function () {
   initSearchInput();
   initSidebar();
-  initializeMenuFilters();
+  
   renderMenu(dataMenus);
 
   checkAndUpdateRefreshCount();
@@ -124,7 +124,11 @@ function renderMenu(filePath) {
         anchor.appendChild(document.createTextNode(` ${item.label}`));
         listItem.appendChild(anchor);
         menuContainer.appendChild(listItem);
+
+        
       });
+
+      initializeMenuFilters();
     })
     .catch(error => {
       console.error('Error fetching data:', error);
@@ -298,7 +302,7 @@ function handleMenuClick(event) {
   event.preventDefault();
 
   const category = event.target.getAttribute("data-category");
-
+  
   clearButton.style.display = searchInput.value ? "block" : "none";
   searchInput.value = event.target.textContent.trim();
 
