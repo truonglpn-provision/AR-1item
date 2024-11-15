@@ -1,9 +1,0 @@
-[
-    { "category": "all", "icon": "fas fa-list", "label": "Tất cả" },
-    { "category": "real-estate", "icon": "fas fa-building", "label": "Bất động sản" },
-    { "category": "interior", "icon": "fas fa-couch", "label": "Nội thất" },
-    { "category": "restaurant", "icon": "fas fa-utensils", "label": "Nhà hàng" },
-    { "category": "events", "icon": "fas fa-calendar-check", "label": "Sự kiện" },
-    { "category": "photo-frame", "icon": "fas fa-camera-retro", "label": "Photo Frame" }
-  ]
-  

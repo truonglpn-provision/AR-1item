@@ -1,4 +1,4 @@
-﻿# Welcome to the **AR Provision** 🚀
+# Welcome to the **AR Provision** 🚀
 
 Welcome to the **AR Provision** repository! 🎉 This is an exciting, fun, and interactive project designed to **[AR]**. Whether you’re a developer, designer, or enthusiast, you’ll find something cool here!
 
