@@ -1,4 +1,5 @@
-const dataSrc = "/assets/data/products.json";
+const dataProducts = "/assets/data/products.json";
+const dataMenus = "/assets/data/menus.json";
 const productGrid = document.getElementById("product-grid");
 const searchInput = document.getElementById("search-input");
 const clearButton = document.getElementById("clear-button");
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initSearchInput();
   initSidebar();
   initializeMenuFilters();
+  renderMenu(dataMenus);
 
   checkAndUpdateRefreshCount();
   displayProducts();
@@ -42,9 +44,9 @@ function handleOutsideClick(event) {
   }
 }
 
-async function getProducts(dataSrc) {
+async function getProducts(dataProducts) {
   try {
-    const response = await fetch(dataSrc);
+    const response = await fetch(dataProducts);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
@@ -63,7 +65,7 @@ function displayProducts() {
     renderProducts(localProducts);
   } else {
     // Nếu chưa có, fetch từ API và lưu vào localStorage
-    fetchAndStoreProducts(dataSrc);
+    fetchAndStoreProducts(dataProducts);
   }
 }
 
@@ -88,15 +90,57 @@ function renderProducts(products) {
   });
 }
 
+
+function renderMenu(filePath) {
+  fetch(filePath)  // Gọi file JSON từ thư mục dữ liệu
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();  // Chuyển đổi phản hồi thành JSON
+    })
+    .then(data => {
+      const menuContainer = document.querySelector('.menu');
+      menuContainer.innerHTML = '';  // Xóa nội dung cũ trong menu
+
+      // Kiểm tra nếu data là mảng
+      if (!Array.isArray(data)) {
+        console.error('Data is not an array');
+        return;
+      }
+
+      // Lặp qua từng mục trong mảng data
+      data.forEach(item => {
+        const listItem = document.createElement('li');
+
+        const anchor = document.createElement('a');
+        anchor.href = "#";
+        anchor.setAttribute('data-category', item.category);
+
+        const icon = document.createElement('i');
+        icon.classList.add(...item.icon.split(' ')); // Thêm các lớp icon
+
+        anchor.appendChild(icon);
+        anchor.appendChild(document.createTextNode(` ${item.label}`));
+        listItem.appendChild(anchor);
+        menuContainer.appendChild(listItem);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+}
+
+
 function generateIconContainer(system) {
   let icons = "";
 
   if (system.includes("android")) {
-    icons += `<img class="android-icon" src="/assets/public/img/android.png" alt="Android">`;
+    icons += `<img class="android-icon" src="/assets/public/img/general/android.png" alt="Android">`;
   }
   
   if (system.includes("ios")) {
-    icons += `<img class="ios-icon" src="/assets/public/img/iOS.png" alt="iOS">`;
+    icons += `<img class="ios-icon" src="/assets/public/img/general/iOS.png" alt="iOS">`;
   }
 
   return `<div class="icon-container">${icons}</div>`;
@@ -156,8 +200,8 @@ function saveProductsToLocalStorage(products) {
   localStorage.setItem("products", JSON.stringify(products));
 }
 
-async function fetchAndStoreProducts(dataSrc) {
-  const products = await getProducts(dataSrc);
+async function fetchAndStoreProducts(dataProducts) {
+  const products = await getProducts(dataProducts);
   saveProductsToLocalStorageWithExpiration(products);
   renderProducts(products);
 }
@@ -267,7 +311,7 @@ function checkAndUpdateRefreshCount() {
 
   // Nếu đã đạt đến số lần refresh tối đa (5 lần) hoặc dữ liệu đã hết hạn
   if (refreshCount >= 5 || products.length === 0) {
-    fetchAndStoreProducts(dataSrc); // Fetch lại dữ liệu từ API và lưu vào localStorage
+    fetchAndStoreProducts(dataProducts); // Fetch lại dữ liệu từ API và lưu vào localStorage
     localStorage.setItem("refreshCount", 0); // Reset lại số lần refresh
   } else {
     // Tăng số lần refresh lên 1
@@ -285,3 +329,4 @@ function saveProductsToLocalStorageWithExpiration(products) {
 
   localStorage.setItem("products", JSON.stringify(dataToStore));
 }
+

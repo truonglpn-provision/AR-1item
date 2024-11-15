@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>PHOTOFRAME KUROCHAN</title>
-  <meta name="description" content="クロちゃんフォトフレーム">
+  <title>PHOTOFRAME PHÚ LONG</title>
+  <meta name="description" content="Phu Long Sale Grand Opening">
   <meta http-equiv="Cache-Control" content="no-cache">
-  <link rel="stylesheet" media="all" href="/assets/public/css/kurochan/style.css" />
-  <link rel="stylesheet" media="all" href="/assets/public/css/kurochan/style_pf.css" />
+  <link rel="stylesheet" media="all" href="/assets/public/css/phulong/style.css" />
+  <link rel="stylesheet" media="all" href="/assets/public/css/phulong/style_pf.css" />
   <link rel="icon" href="/assets/public/img/general/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,8 +34,8 @@
   <!-- 画像のプリロード -->
   <script>
     // 画像パス
-    var imgPath = [["/assets/kurochan/img/frame_1_1.png", "/assets/kurochan/img/frame_1_2.png", "/assets/kurochan/img/frame_1_3.png", "/assets/kurochan/img/frame_1_4.png", "/assets/kurochan/img/kirikae_2.png"],
-    ["/assets/kurochan/img/frame_2_1.png", "/assets/kurochan/img/frame_2_2.png", "/assets/kurochan/img/frame_2_3.png?1", "/assets/kurochan/img/frame_2_4.png?1", "/assets/kurochan/img/kirikae_1.png"]];
+    var imgPath = [["/assets/kurochan/img/frame_1_1.png", "/assets/kurochan/img/frame_1_2.png", "/assets/kurochan/img/frame_1_3.png", "/assets/public/img/canva/phulong/sale-grand-opening/pl-pavilion_rm.png", "/assets/kurochan/img/kirikae_2.png"],
+    ["/assets/kurochan/img/frame_2_1.png", "/assets/photo_frame/phulong-sale-grand-opening/PhuLong_Sale_Grand-Opening_FINAL.png", "/assets/photo_frame/phulong-sale-grand-opening/PhuLong_Sale_Grand-Opening_FINAL.png", "/assets/kurochan/img/frame_2_4.png?1", "/assets/kurochan/img/kirikae_1.png"]];
     var clockPath = [["/assets/kurochan/img/clock_1.png", "/assets/kurochan/img/clock_1_hor.png", "/assets/kurochan/img/clock_1_min.png"],
     ["/assets/kurochan/img/clock_2.png", "/assets/kurochan/img/clock_2_hor.png", "/assets/kurochan/img/clock_2_min.png"]];
 
@@ -210,7 +210,7 @@
     document.addEventListener('touchmove', disableScroll, { passive: false });
     // 端末の向きが変化したときの処理
     window.addEventListener("orientationchange", () => {
-      resetToInitialPosition();
+      //resetToInitialPosition();
     });
   </script>
 
@@ -229,23 +229,20 @@
       <!-- スクリーン画像 -->
       <div id="guide" class="sceneCanvas" style="visibility:visible">
         <!-- <img class="imgs1 scaling1 drag-and-drop" src="/assets/kurochan/img/stamp_1.png" /> -->
-        <img class="img1" src="/assets/kurochan/img/frame_1_1.png" />
-        <img class="img2" src="/assets/kurochan/img/frame_1_2.png" />
-        <img class="img3" src="/assets/kurochan/img/frame_1_3.png" />
-        <img class="img4" src="/assets/kurochan/img/frame_1_4.png" />
+        <!-- <img class="img1" src="/assets/kurochan/img/frame_1_1.png" />
+        
+        <img class="img2" src="/assets/kurochan/img/frame_1_2.png" /> -->
+        <img class="img3" src="/assets/public/img/canva/phulong/sale-grand-opening/pl_down-rmbg.png" />
+        <img class="img4" src="/assets/public/img/canva/phulong/sale-grand-opening/pl-pavilion_rm.png" />
         <img class="imgC" src="/assets/kurochan/img/clock_1.png" />
         <img class="imgC2" src="/assets/kurochan/img/clock_1_hor.png" />
         <img class="imgC3" src="/assets/kurochan/img/clock_1_min.png" />
         <img class="stamp1 drag-and-drop" src="/assets/kurochan/img/stamp_1.png" />
         <img class="stamp2 drag-and-drop" src="/assets/kurochan/img/stamp_2.png" />
         <img class="stamp3 drag-and-drop" src="/assets/kurochan/img/stamp_3.png" />
-        <img class="imgS" onClick="switchCamera()" src="/assets/kurochan/img/camera_2.png" />
+        <img class="imgS" onClick="switchCamera()" src="/assets/public/img/canva/general/camera_backside.png" />
         <img class="imgS2" onClick="switchImages()" src="/assets/kurochan/img/kirikae_2.png" />
-        <div class="stampBs">
-          <img class="stampB1" onClick="switchStamps(0)" src="/assets/kurochan/img/stamp_button_1.png" />
-          <img class="stampB2" onClick="switchStamps(1)" src="/assets/kurochan/img/stamp_button_2.png" />
-          <img class="stampB3" onClick="switchStamps(2)" src="/assets/kurochan/img/stamp_button_3.png" />
-        </div>
+       
       </div>
 
       <!-- フラッシュスクリーン -->
@@ -266,29 +263,29 @@
 
       <!-- 端末回転時オーバーレイ -->
       <div class="overlay">
-        <img id="rot" src="/assets/kurochan/img/rotate.png" />
+        <img id="rot" src="/assets/public/img/canva/general/rotate.png" />
       </div>
 
       <!-- カメラ拒否時オーバーレイ-->
       <div class="overlay_cameranone">
-        <img id="cameranone" src="/assets/kurochan/img/cameranone_alert.png" />
+        <img id="cameranone" src="/assets/public/img/canva/general/cameranone_alert.png" />
       </div>
 
       <!-- 撮影ボタン（配置） -->
       <div class="ui" id="photoBtn" style="visibility:visible">
         <img id="snap">
         <video id="video_record" autoplay playsinline></video>
-        <img id="get-info" src="/assets/kurochan/img/text_hozon.png?202403" />
+        <img id="get-info" src="/assets/public/img/canva/general/text_hozon.png" />
         <a href="#" id="delete-photo" class="disabled">
-          <img id="delete" src="/assets/kurochan/img/return.png" />
-          <img id="share" src="/assets/kurochan/img/share.png" />
+          <img id="delete" src="/assets/public/img/canva/general/return.png" />
+          <img id="share" src="/assets/public/img/canva/general/share.png" />
         </a>
         <div id="page-button">
           <!--   <img id="pf1" src="/assets/kurochan/img/number1.png?2" />
           <img id="pf2" src="/assets/kurochan/img/number2.png?2" /> -->
         </div>
         <a href="" id="take-photo">
-          <img class="cameraIcon" src="/assets/kurochan/img/camera_1.png" />
+          <img class="cameraIcon" src="/assets/public/img/canva/general/camera_front.png" />
         </a>
       </div>
     </section>
@@ -301,8 +298,8 @@
 <script>
   var img_1 = document.querySelector(".img1");
   var img_2 = document.querySelector(".img2");
-  var img_3 = document.querySelector(".img3");
-  var img_4 = document.querySelector(".img4");
+  var imgDown = document.querySelector(".img3");
+  var imgTop = document.querySelector(".img4");
   var img_Sw2 = document.querySelector(".imgS2");
   var img_C = document.querySelector(".imgC");
   var img_C2 = document.querySelector(".imgC2");
@@ -316,8 +313,8 @@
   var scene = 0;
   var isAnimating = false;
   var stampVis = [false, false, false];
-  var imgPath = [["/assets/kurochan/img/frame_1_1.png", "/assets/kurochan/img/frame_1_2.png", "/assets/kurochan/img/frame_1_3.png", "/assets/kurochan/img/frame_1_4.png", "/assets/kurochan/img/kirikae_2.png"],
-  ["/assets/kurochan/img/frame_2_1.png", "/assets/kurochan/img/frame_2_2.png", "/assets/kurochan/img/frame_2_3.png?1", "/assets/kurochan/img/frame_2_4.png?1", "/assets/kurochan/img/kirikae_1.png"]];
+  var imgPath = [["/assets/kurochan/img/frame_1_1.png", "/assets/kurochan/img/frame_1_2.png", "/assets/kurochan/img/frame_1_3.png", "/assets/public/img/canva/phulong/sale-grand-opening/pl-pavilion_rm.png", "/assets/kurochan/img/kirikae_2.png"],
+  ["/assets/kurochan/img/frame_2_1.png", "/assets/public/img/canva/phulong/sale-grand-opening/pl_down-rmbg.png", "/assets/public/img/canva/phulong/sale-grand-opening/pl_down-rmbg.png", "/assets/kurochan/img/frame_2_4.png?1", "/assets/kurochan/img/kirikae_1.png"]];
   var clockPath = [["/assets/kurochan/img/clock_1.png", "/assets/kurochan/img/clock_1_hor.png", "/assets/kurochan/img/clock_1_min.png"],
   ["/assets/kurochan/img/clock_2.png", "/assets/kurochan/img/clock_2_hor.png", "/assets/kurochan/img/clock_2_min.png"]]
   function switchImages() {
@@ -344,13 +341,13 @@
       changeClock();
       $(img_1).attr("src", imgPath[scene][0]);
       $(img_2).attr("src", imgPath[scene][1]);
-      $(img_3).attr("src", imgPath[scene][2]);
-      $(img_4).attr("src", imgPath[scene][3]);
+      $(imgDown).attr("src", imgPath[scene][2]);
+      $(imgTop).attr("src", imgPath[scene][3]);
       $(img_Sw2).attr("src", imgPath[scene][4]);
       if (scene == 1) {
-        $(img_4).css("zIndex", 7);
+        $(imgTop).css("zIndex", 7);
       } else if (scene == 0) {
-        $(img_4).css("zIndex", 5);
+        $(imgTop).css("zIndex", 5);
       }
     }, 450)
     setTimeout(() => {
@@ -361,8 +358,8 @@
   function moveImg() {
     $(img_1).css("animation", "slide1 1s forwards");
     $(img_2).css("animation", "slide2 1s forwards");
-    $(img_3).css("animation", "slide3 1s forwards");
-    $(img_4).css("animation", "slide4 1s forwards");
+    $(imgDown).css("animation", "slide3 1s forwards");
+    $(imgTop).css("animation", "slide4 1s forwards");
     $(img_C).css("animation", "slideC 1s forwards");
     $(img_C2).css("animation", "slideC 1s forwards");
     $(img_C3).css("animation", "slideC 1s forwards");
@@ -370,8 +367,8 @@
   function removeAnim() {
     $(img_1).css("animation", "");
     $(img_2).css("animation", "");
-    $(img_3).css("animation", "");
-    $(img_4).css("animation", "");
+    $(imgDown).css("animation", "");
+    $(imgTop).css("animation", "");
     $(img_C).css("animation", "");
     $(img_C2).css("animation", "");
     $(img_C3).css("animation", "");
@@ -390,37 +387,7 @@
       $(img_C3).css("left", 0);
     }
   }
-  function switchStamps(stampNum) {
-    stampVis[stampNum] = !stampVis[stampNum];
-    if (stampNum == 0) {
-      if (stampVis[stampNum]) {
-        $(img_S1).css("display", "block");
-        $(img_S1).css("animation", "pop 0.7s forwards");
-        $(img_Sb1).animate({ width: '100%' }, 200);
-      } else {
-        $(img_S1).css("display", "none");
-        $(img_Sb1).animate({ width: '75%' }, 200);
-      }
-    } else if (stampNum == 1) {
-      if (stampVis[stampNum]) {
-        $(img_S2).css("animation", "pop 0.7s forwards");
-        $(img_S2).css("display", "block");
-        $(img_Sb2).animate({ width: '100%' }, 200);
-      } else {
-        $(img_S2).css("display", "none");
-        $(img_Sb2).animate({ width: '75%' }, 200);
-      }
-    } else if (stampNum == 2) {
-      if (stampVis[stampNum]) {
-        $(img_S3).css("animation", "pop 0.7s forwards");
-        $(img_S3).css("display", "block");
-        $(img_Sb3).animate({ width: '100%' }, 200);
-      } else {
-        $(img_S3).css("display", "none");
-        $(img_Sb3).animate({ width: '75%' }, 200);
-      }
-    }
-  }
+
 </script>
 
 <script>
@@ -432,8 +399,8 @@
   var get_info = document.querySelector('#get-info');
   var img_1 = document.querySelector(".img1");
   var img_2 = document.querySelector(".img2");
-  var img_3 = document.querySelector(".img3");
-  var img_4 = document.querySelector(".img4");
+  var imgDown = document.querySelector(".img3");
+  var imgTop = document.querySelector(".img4");
   var imgC = document.querySelector('.imgC');
   var imgC2 = document.querySelector('.imgC2');
   var imgC3 = document.querySelector('.imgC3');
@@ -576,8 +543,8 @@
       page_btn.style.display = "none";
       deletes.style.visibility = "visible";
       delete_bg.style.visibility = "visible";
-      get_info.style.visibility = "visible";
-      get_info.classList.add('fadeAction');
+      get_info.style.visibility = "none";
+      //get_info.classList.add('fadeAction');
     }, 300)
   }
 
@@ -640,6 +607,7 @@
       resizedCanvas.width = winWidth * sizeOffset;
       resizedCanvas.height = winHeight * sizeOffset;
 
+
       //videoのサイズを調整
       var canWidth = width * (winHeight / height);
       var canHeight = height * (winWidth / width);
@@ -648,46 +616,32 @@
       var vHeight = winHeight * sizeOffset * deviceOffset;
 
       //imgのサイズと配置を調整
-      var iPos_1 = $('.img1').position();
-      var iWidth_1 = img_1.width * sizeOffset
-      var iHeight_1 = img_1.height * sizeOffset
-      var iLeft_1 = iPos_1.left * sizeOffset
-      var iTop_1 = iPos_1.top * sizeOffset
-      var iPos_2 = $('.img2').position();
-      var iWidth_2 = img_2.width * sizeOffset
-      var iHeight_2 = img_2.height * sizeOffset
-      var iLeft_2 = iPos_2.left * sizeOffset
-      var iTop_2 = iPos_2.top * sizeOffset
+      // var iPos_1 = $('.img1').position();
+      // var iWidth_1 = img_1.width * sizeOffset
+      // var iHeight_1 = img_1.height * sizeOffset
+      // var iLeft_1 = iPos_1.left * sizeOffset
+      // var iTop_1 = iPos_1.top * sizeOffset
+      // var iPos_2 = $('.img2').position();
+      // var iWidth_2 = img_2.width * sizeOffset
+      // var iHeight_2 = img_2.height * sizeOffset
+      // var iLeft_2 = iPos_2.left * sizeOffset
+      // var iTop_2 = iPos_2.top * sizeOffset
       var iPos_3 = $('.img3').position();
-      var iWidth_3 = img_3.width * sizeOffset
-      var iHeight_3 = img_3.height * sizeOffset
+      var iWidth_3 = imgDown.width * sizeOffset
+      var iHeight_3 = imgDown.height * sizeOffset
       var iLeft_3 = iPos_3.left * sizeOffset
       var iTop_3 = iPos_3.top * sizeOffset
       var iPos_4 = $('.img4').position();
-      var iWidth_4 = img_4.width * sizeOffset
-      var iHeight_4 = img_4.height * sizeOffset
+      var iWidth_4 = imgTop.width * sizeOffset
+      var iHeight_4 = imgTop.height * sizeOffset
       var iLeft_4 = iPos_4.left * sizeOffset
       var iTop_4 = iPos_4.top * sizeOffset
-      var iPos_C = $('.imgC').position();
-      var iWidth_C = imgC.width * sizeOffset
-      var iHeight_C = imgC.height * sizeOffset
-      var iLeft_C = iPos_C.left * sizeOffset
-      var iTop_C = iPos_C.top * sizeOffset
-      var iPos_S1 = $('.stamp1').position();
-      var iWidth_S1 = img_S1.width * sizeOffset
-      var iHeight_S1 = img_S1.height * sizeOffset
-      var iLeft_S1 = iPos_S1.left * sizeOffset
-      var iTop_S1 = iPos_S1.top * sizeOffset
-      var iPos_S2 = $('.stamp2').position();
-      var iWidth_S2 = img_S2.width * sizeOffset
-      var iHeight_S2 = img_S2.height * sizeOffset
-      var iLeft_S2 = iPos_S2.left * sizeOffset
-      var iTop_S2 = iPos_S2.top * sizeOffset
-      var iPos_S3 = $('.stamp3').position();
-      var iWidth_S3 = img_S3.width * sizeOffset
-      var iHeight_S3 = img_S3.height * sizeOffset
-      var iLeft_S3 = iPos_S3.left * sizeOffset
-      var iTop_S3 = iPos_S3.top * sizeOffset
+      // var iPos_C = $('.imgC').position();
+      // var iWidth_C = imgC.width * sizeOffset
+      // var iHeight_C = imgC.height * sizeOffset
+      // var iLeft_C = iPos_C.left * sizeOffset
+      // var iTop_C = iPos_C.top * sizeOffset
+    
 
       if (window_now === 1) {
         vWidth = winWidth * sizeOffset;
@@ -724,43 +678,16 @@
 
       //canvasに画像を描画（後に描くほどレイヤーが上になる）
       if (scene == 0) {
-        resizedContext.drawImage(img_4, iLeft_4, iTop_4, iWidth_4, iHeight_4);
-        resizedContext.drawImage(img_3, iLeft_3, iTop_3, iWidth_3, iHeight_3);
-        resizedContext.drawImage(img_2, iLeft_2, iTop_2, iWidth_2, iHeight_2);
-        resizedContext.drawImage(img_1, iLeft_1, iTop_1, iWidth_1, iHeight_1);
+        resizedContext.drawImage(imgDown, iLeft_3, iTop_3, iWidth_3, iHeight_3);
+        resizedContext.drawImage(imgTop, iLeft_4, iTop_4, iWidth_4, iHeight_4);
+       
       } else if (scene == 1) {
-        resizedContext.drawImage(img_3, iLeft_3, iTop_3, iWidth_3, iHeight_3);
-        resizedContext.drawImage(img_4, iLeft_4, iTop_4, iWidth_4, iHeight_4);
-        resizedContext.drawImage(img_2, iLeft_2, iTop_2, iWidth_2, iHeight_2);
-        resizedContext.drawImage(img_1, iLeft_1, iTop_1, iWidth_1, iHeight_1);
+        resizedContext.drawImage(imgDown, iLeft_3, iTop_3, iWidth_3, iHeight_3);
+        resizedContext.drawImage(imgTop, iLeft_4, iTop_4, iWidth_4, iHeight_4);
+        
       }
 
-      //時計を描画
-      resizedContext.drawImage(imgC, iLeft_C, iTop_C, iWidth_C, iHeight_C);
-      // imgC3 を回転させて描画
-      resizedContext.save();
-      resizedContext.translate(iLeft_C + iWidth_C / 2, iTop_C + iHeight_C / 2);
-      resizedContext.rotate(minutesAngle * Math.PI / 180);
-      resizedContext.drawImage(imgC3, -iWidth_C / 2, -iHeight_C / 2, iWidth_C, iHeight_C);
-      resizedContext.restore();
 
-      // imgC2 を回転させて描画
-      resizedContext.save();
-      resizedContext.translate(iLeft_C + iWidth_C / 2, iTop_C + iHeight_C / 2);
-      resizedContext.rotate(hoursAngle * Math.PI / 180);
-      resizedContext.drawImage(imgC2, -iWidth_C / 2, -iHeight_C / 2, iWidth_C, iHeight_C);
-      resizedContext.restore();
-
-      //スタンプ描画
-      if (stampVis[0]) {
-        resizedContext.drawImage(img_S1, iLeft_S1, iTop_S1, iWidth_S1, iHeight_S1);
-      }
-      if (stampVis[1]) {
-        resizedContext.drawImage(img_S2, iLeft_S2, iTop_S2, iWidth_S2, iHeight_S2);
-      }
-      if (stampVis[2]) {
-        resizedContext.drawImage(img_S3, iLeft_S3, iTop_S3, iWidth_S3, iHeight_S3);
-      }
 
       return resizedCanvas.toDataURL('image/png');
     }
