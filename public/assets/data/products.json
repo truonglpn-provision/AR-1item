@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "title": "Sản phẩm AR Tòa Nhà (Tower)",
+    "image": "/assets/img/construct/modal_02.png",
+    "logo": "/assets/img/general/favicon.png",
+    "price": "2.500",
+    "description": "Mang đến trải nghiệm khám phá không gian kiến trúc thực tế ảo sống động, phù hợp cho các dự án bất động sản và giới thiệu tòa nhà",
+    "link": "/tower",
+    "category": "real-estate",
+    "system": "ios, android"
+  },
+  {
+    "id": 2,
+    "title": "Sản phẩm AR Menu tại Nhà Hàng",
+    "image": "/assets/img/restaurant/new_menu2.png",
+    "logo": "/assets/img/general/favicon.png",
+    "price": "1.000",
+    "description": "Thực đơn ảo giúp khách hàng khám phá món ăn theo cách tương tác, tạo trải nghiệm độc đáo và tăng doanh thu cho nhà hàng.",
+    "link": "/restaurant",
+    "category": "restaurant",
+    "system": "ios, android"
+  },
+  {
+    "id": 3,
+    "title": "Sản phẩm AR Cá Vàng (Menas Event)",
+    "image": "/assets/img/menas/goldenfish/top_main.png",
+    "logo": "/assets/img/general/favicon.png",
+    "price": "700",
+    "description": "Tạo hiệu ứng thu hút với hình ảnh cá vàng 3D chuyển động, hoàn hảo cho các sự kiện và triển lãm tương tác.",
+    "link": "/goldfish",
+    "category": "events",
+    "system": "ios, android"
+  },
+  {
+    "id": 4,
+    "title": "Sản phẩm AR Khủng Long (Menas Event)",
+    "image": "/assets/img/menas/dinosaur/top_main.png",
+    "logo": "/assets/img/general/favicon.png",
+    "price": "700",
+    "description": "Trải nghiệm thế giới khủng long sống động với hiệu ứng thực tế ảo, thu hút sự chú ý và tương tác của khách hàng tại sự kiện.",
+    "link": "/dinosaur",
+    "category": "events",
+    "system": "ios, android"
+  },
+  {
+    "id": 5,
+    "title": "Sản phẩm Canva Photo Frame Kuro Chan",
+    "image": "/assets/img/canva/kurochan/frame_2_3.png",
+    "logo": "/assets/img/general/canva.jpeg",
+    "price": "700",
+    "description": "Mang đến trải nghiệm chụp ảnh AR sống động cùng Kuro Chan, tạo khung hình vui nhộn và tương tác trực tiếp. Hoàn hảo cho sự kiện, thu hút khách và để lại ấn tượng khó quên.",
+    "link": "/photoframe/kurochan",
+    "category": "photo-frame",
+    "system": "ios, android"
+  },
+  {
+    "id": 6,
+    "title": "Sản phẩm AR Nội Thất 3D",
+    "image": "/assets/img/furniture/home.png",
+    "logo": "/assets/img/general/favicon.png",
+    "price": "1500",
+    "description": "Ứng dụng AR Nội Thất cho phép bạn thử đồ ngay trong nhà bằng điện thoại. Trực quan, dễ dùng, giúp bạn chọn nội thất chính xác về màu sắc và kích thước, tiết kiệm thời gian và tối ưu trải nghiệm mua sắm.",
+    "link": "https://demo-three-js-one.vercel.app/",
+    "category": "interior",
+    "system": "ios, android"
+  },
+  {
+    "id": 7,
+    "title": "Sản phẩm Canva Photo Frame Phú Long Sale Grand Opening",
+    "image": "/assets/img/canva/phulong/sale-grand-opening/pl_img_product.jpg",
+    "logo": "/assets/img/general/canva.jpeg",
+    "price": "700",
+    "description": "Chào mừng khai trương, Khung Ảnh Phú Long Pavilion mang đến một trải nghiệm mới trong việc trang trí không gian. Với thiết kế hiện đại, sang trọng, sản phẩm này giúp bạn lưu giữ những khoảnh khắc đẹp trong một khung hình tuyệt vời.",
+    "link": "/phulong/sale-grand-opening",
+    "category": "photo-frame",
+    "system": "ios, android"
+  }
+]

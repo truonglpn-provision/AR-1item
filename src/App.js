@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import Dinosaur from './pages/Dinosaur';
+import Goldfish from './pages/Goldfish';
+import Tower from './pages/Tower';
+import Phulong from './pages/canva/Phulong';
+import Restaurant from './pages/Restaurant';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/tower" element={<Tower/>} />
+        <Route path="/dinosaur" element={<Dinosaur/>}/>
+        <Route path="/goldfish" element={<Goldfish/>}/>
+        <Route path="/restaurant" element={<Restaurant/>}/>
+        <Route path="/phulong/sale-grand-opening" element={<Phulong/>}/>
+        <Route path="/*" element={<NotFound/>} />
+      </Routes>
+    </Router>
   );
 }
 

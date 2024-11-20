@@ -1,0 +1,57 @@
+/* ARModelViewer.css */
+.model-viewer {
+    width: 100%;
+    height: auto;
+    outline: none;
+    max-width: 80vw;
+    min-height: 300px;
+    max-height: 70vh;
+  
+  }
+  
+
+@media (min-width: 1024px) {
+  .model-viewer {
+    max-width: 70vw;
+    min-height: 400px;
+    max-height: 60vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .model-viewer {
+    max-width: 60vw;
+    min-height: 500px;
+    max-height: 50vh;
+  }
+}
+
+@media (min-width: 1920px) {
+  .model-viewer {
+    max-width: 50vw;
+    min-height: 600px;
+    max-height: 50vh;
+  }
+}
+
+  @media (max-width: 768px) {
+    .model-viewer {
+      max-width: 100%;
+      min-height: 250px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .model-viewer {
+      max-width: 100%;
+      min-height: 200px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .model-viewer {
+      max-width: 100%;
+      min-height: 180px;
+    }
+  }
+  
