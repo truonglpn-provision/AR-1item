@@ -17,7 +17,7 @@ const ProductGrid = ({ products }) => {
           )}
 
           <img
-            src={`${process.env.REACT_APP_PUBLIC_URL}${product.image}`}
+            src={`${product.image}`}
             alt={product.title}
             className="w-full h-48 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105"
           />

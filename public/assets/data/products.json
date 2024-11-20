@@ -50,7 +50,7 @@
     "logo": "/assets/img/general/canva.jpeg",
     "price": "700",
     "description": "Mang đến trải nghiệm chụp ảnh AR sống động cùng Kuro Chan, tạo khung hình vui nhộn và tương tác trực tiếp. Hoàn hảo cho sự kiện, thu hút khách và để lại ấn tượng khó quên.",
-    "link": "/photoframe/kurochan",
+    "link": "/assets/canva/kurochan",
     "category": "photo-frame",
     "system": "ios, android"
   },
