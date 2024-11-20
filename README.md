@@ -14,32 +14,35 @@ Welcome to the **AR Provision** repository! 🎉 This is an exciting, fun, and i
 
 Before you start, make sure you have the following installed:
 
+- **Node.js and npm**: Make sure you have Node.js installed, which also includes npm (Node Package Manager).
 - **Visual Studio Code**: A lightweight code editor.
-- **Live Server Extension**: A VS Code extension to serve static web pages on a local development server.
-
-You can install Live Server from the VS Code marketplace:
-
-1. Go to the Extensions view (`Ctrl+Shift+X`).
-2. Search for **Live Server** and click **Install**.
 
 ### Installation
+1. Clone the repository:
 
-1. **Clone the repository**
-   ```bash
+   ```sh
    git clone https://github.com/truonglpn-provision/AR-1item.git
    ```
 
-2. **Open the project in Visual Studio Code**
-   ```bash
-   code .
+2. Navigate to the project directory:
+
+   ```sh
+   cd AR-1item
    ```
 
-3. **Run the project**
+3. Install dependencies:
 
-   - Once the project is open in VS Code, simply click the **Go Live** button at the bottom-right of the VS Code window.
-   - This will start a local server and open the project in your default web browser! 🎉
+   ```sh
+   npm install
+   ```
 
-Your project should now be live and running in the browser. No additional configuration needed!
+4. Start the development server:
+
+   ```sh
+   npm start
+   ```
+
+Once the project is open, simply navigate to [http://localhost:3000](http://localhost:3000) in your web browser. This will start the project locally and allow you to view it live!
 
 ## 🧑‍💻 Contributing
 
@@ -47,9 +50,24 @@ We welcome contributions! Please fork this repo, create a new branch, and submit
 
 ### How to contribute:
 1. Fork this repository
-2. Create a new branch: `git checkout -b feature/new-feature`
-3. Commit your changes: `git commit -am 'Add new feature'`
-4. Push to the branch: `git push origin feature/new-feature`
+2. Create a new branch:
+
+   ```sh
+   git checkout -b feature/new-feature
+   ```
+
+3. Commit your changes:
+
+   ```sh
+   git commit -am 'Add new feature'
+   ```
+
+4. Push to the branch:
+
+   ```sh
+   git push origin feature/new-feature
+   ```
+
 5. Open a pull request
 
 ## 💡 Ideas for Future Enhancements
@@ -66,15 +84,10 @@ We welcome contributions! Please fork this repo, create a new branch, and submit
 
 If you need help or want to engage with the community, you can reach us through the following channels:
 
-📢 Community & Support
-Nếu bạn cần trợ giúp hoặc muốn tham gia cùng cộng đồng, bạn có thể liên lạc qua các kênh SNS sau:
+- Twitter: 🐦 [Follow us on Twitter](https://twitter.com/ProVision_all)
+- Facebook: 📱 [Follow us on Facebook](https://www.facebook.com/provisionvn/)
+- YouTube: ▶️ [Follow us on YouTube](https://www.youtube.com/@provisionvn)
+- TikTok: 🎶 [Follow us on TikTok](http://www.tiktok.com/@provision.vn)
+- LinkedIn: 💼 [Follow us on LinkedIn](https://www.linkedin.com/in/provisionvn/)
 
-- X (Twitter): 🐦 [Follow us on Twitter](https://twitter.com/ProVision_all)
-- Facebook: 📱 [Follow us on Twitter](https://www.facebook.com/provisionvn/)
-- YouTube: ▶️ [Follow us on Twitter](https://www.youtube.com/@provisionvn)
-- TikTok: 🎶 [Follow us on Twitter](http://www.tiktok.com/@provision.vn)
-- LinkedIn: 💼 [Follow us on Twitter](https://www.linkedin.com/in/provisionvn/)
-
-Chúng tôi luôn sẵn sàng hỗ trợ và lắng nghe đóng góp của bạn! 🌟
-
-
+We are always ready to support and listen to your contributions! 🌟
