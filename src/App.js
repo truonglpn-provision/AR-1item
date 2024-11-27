@@ -7,6 +7,7 @@ import Goldfish from './pages/Goldfish';
 import Tower from './pages/Tower';
 import Phulong from './pages/canva/Phulong';
 import Restaurant from './pages/Restaurant';
+import Snow from './pages/Snow';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/goldfish" element={<Goldfish/>}/>
         <Route path="/restaurant" element={<Restaurant/>}/>
         <Route path="/phulong/sale-grand-opening" element={<Phulong/>}/>
+        <Route path="/christmas/snow" element={<Snow/>}/>
         <Route path="/*" element={<NotFound/>} />
       </Routes>
     </Router>

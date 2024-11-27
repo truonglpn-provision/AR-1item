@@ -75,5 +75,17 @@
     "link": "/assets/canva/phulong",
     "category": "photo-frame",
     "system": "ios, android"
+  },
+  
+  {
+    "id": 8,
+    "title": "Sản phẩm AR Snow Demo",
+    "image": "/assets/img/snow.jpg",
+    "logo": "/assets/img/general/favicon.png",
+    "price": "700",
+    "description": "Tuyết, với vẻ đẹp tinh khôi và lãng mạn, luôn là nguồn cảm hứng bất tận trong nghệ thuật và công nghệ. Trong thế giới kỹ thuật số, hiệu ứng 3D mang đến một cái nhìn mới mẻ và sống động về hiện tượng tự nhiên này. ",
+    "link": "/christmas/snow",
+    "category": "photo-frame",
+    "system": "ios, android"
   }
 ]
