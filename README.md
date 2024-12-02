@@ -12,7 +12,7 @@ Welcome to the **AR Provision** repository! 🎉 This is an exciting, fun, and i
 
 ### Prerequisites
 
-Before you start, make sure you have the following installed:
+Before you start, make sure you have the following installed :
 
 - **Node.js and npm**: Make sure you have Node.js installed, which also includes npm (Node Package Manager).
 - **Visual Studio Code**: A lightweight code editor.
